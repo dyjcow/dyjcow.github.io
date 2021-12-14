@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, LikeYou">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="第一章 安卓开发整体介绍|《第一行代码》笔记, LikeYou">
+    <meta name="description" content="Android入门篇">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | LikeYou</title>
+    <title>第一章 安卓开发整体介绍|《第一行代码》笔记 | LikeYou</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -312,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://i.loli.net/2021/10/09/iFWTetAq6OBwRZn.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">第一章 安卓开发整体介绍|《第一行代码》笔记</h1>
                 </div>
             </div>
         </div>
@@ -431,12 +431,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Android/">
+                                <span class="chip bg-color">Android</span>
+                            </a>
+                        
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Android%E7%AC%AC%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81/" class="post-category">
+                                Android第一行代码
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -459,7 +476,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    73
+                    1.4k
                 </div>
                 
 
@@ -484,19 +501,112 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h2><h3 id="1-1-系统架构"><a href="#1-1-系统架构" class="headerlink" title="1.1 系统架构"></a>1.1 系统架构</h3><p><img src="https://i.loli.net/2021/10/09/iFWTetAq6OBwRZn.png" alt="Android架构图"></p>
+<h4 id="1-1-1-Linux内核层"><a href="#1-1-1-Linux内核层" class="headerlink" title="1.1.1 Linux内核层"></a>1.1.1 Linux内核层</h4><ul>
+<li>允许写底层硬件驱动</li>
+<li>依靠Linux执行底层功能，例如线程和低层内存管理</li>
+</ul>
+<h4 id="1-1-2-硬件抽象层（HAL）"><a href="#1-1-2-硬件抽象层（HAL）" class="headerlink" title="1.1.2 硬件抽象层（HAL）"></a>1.1.2 硬件抽象层（HAL）</h4><ul>
+<li>为特定类型硬件实现界面，例如相机和蓝牙模块。在API框架层要访问该硬件时，Android系统就是向API框架层提供此界面。</li>
+</ul>
+<h4 id="1-1-3-系统运行库层"><a href="#1-1-3-系统运行库层" class="headerlink" title="1.1.3 系统运行库层"></a>1.1.3 系统运行库层</h4><ul>
+<li><p>本层中系统组件等（例如ART和HAL）使用到的是C/C++库提供的特性支持。例如SQLite提供的数据库，OpenGL ES 提供的2D/3D绘图，Webkit提供的浏览器内核。<br>如果在应用层需要使用到C/C++的代码，则需要Android NDK来访问这些原生库。</p>
+</li>
+<li><p>除了上述的库，还有Android运行时库。Android的核心库中可提供Java API框架的大部分功能，我们也可以使用Java语言编Android应用。此外，Android还包含了一款虚拟机——<a target="_blank" rel="noopener" href="https://source.android.com/devices/tech/dalvik/index.html?hl=zh-cn">ART</a>(Android Runtime)，在Android 5.0前使用的是Dalvik，现在的ART是Dalvik的改进版。ART使得每一个应用都能运行在<strong>独立的进程</strong>中。</p>
+</li>
+<li><p>ART 编写执行 DEX 文件,DEX可以在低内存设备上运行多个虚拟机，其是一种专为 Android 设计的字节码格式，经过优化，使用的内存很少。其中编译工具链（例如 <a target="_blank" rel="noopener" href="https://source.android.com/source/jack.html?hl=zh-cn">Jack</a>)）将 Java 源代码编译为 DEX 字节码，使其可在 Android 平台上运行。</p>
+</li>
+</ul>
+<blockquote>
+<h5 id="ART特性"><a href="#ART特性" class="headerlink" title="ART特性"></a>ART特性</h5><h6 id="1-预编译"><a href="#1-预编译" class="headerlink" title="1. 预编译"></a>1. 预编译</h6><p>Dalvik 中的应用每次运行时，字节码都需要通过即时编译器 JIT 转换为机器码，这会使得应用的运行效率降低。在 ART 中，系统在安装应用时会进行一次预编译（AOT，Ahead-Of-Time），将字节码预先编译成机器码并存储在本地，这样应用就不用在每次运行时执行编译了，运行效率也大大提高。</p>
+<h6 id="2-垃圾回收算法"><a href="#2-垃圾回收算法" class="headerlink" title="2. 垃圾回收算法"></a>2. 垃圾回收算法</h6><p>在 Dalvik 采用的垃圾回收算法是<strong>标记-清除算法</strong>，启动垃圾回收机制会造成两次暂停（一次在遍历阶段，另一次在标记阶段）。而在 ART 下，GC 速度比 Dalvik 要快，这是因为应用本身做了垃圾回收的一些工作，启动 GC 后，不再是两次暂停，而是一次暂停，而且 ART 使用了一种新技术（packard pre-cleaning），在暂停前做了许多事情，减轻了暂停时的工作量。</p>
+<h6 id="3-64-位"><a href="#3-64-位" class="headerlink" title="3. 64 位"></a>3. 64 位</h6><p>Dalvik 是为 32 位 CPU 设计的，而 ART 支持 64 位并兼容 32 位 CPU，这也是 Dalvik 被淘汰的主要原因。</p>
+</blockquote>
+<h4 id="1-1-4-应用框架层-Java-API框架"><a href="#1-1-4-应用框架层-Java-API框架" class="headerlink" title="1.1.4 应用框架层(Java API框架)"></a>1.1.4 应用框架层(Java API框架)</h4><ul>
+<li>提供构建程序的各种API框架，Android系统自身会用到，我们开发应用也会用到</li>
+</ul>
+<h4 id="1-1-5-应用层"><a href="#1-1-5-应用层" class="headerlink" title="1.1.5 应用层"></a>1.1.5 应用层</h4><ul>
+<li>本层包括系统自身的应用，也包括我们开发或者下载安装的应用。就是手机软件，是对使用者最直观的体现。</li>
+</ul>
+<h3 id="1-2-Android应用开发特性"><a href="#1-2-Android应用开发特性" class="headerlink" title="1.2 Android应用开发特性"></a>1.2 Android应用开发特性</h3><ul>
+<li><p><strong>四大组件</strong></p>
+<blockquote>
+<p>Activity： 程序的页面<br>Service：后台服务，例如后台闹钟，自动定位<br>Broadcast Receiver：接收来自各处的广播<br>Content Provider：使得程序之间可以共享数据，例如读取电话簿的联系人</p>
+</blockquote>
+</li>
+<li><p><strong>各种系统控件</strong>，例如按钮输入框啥的</p>
+</li>
+<li><p><strong>SQLite数据库</strong>，也可借用第三方库(LitePal)更容易上手</p>
+</li>
+<li><p><strong>多媒体</strong>，使用程序控制音乐、视频等</p>
+</li>
+<li><p><strong>定位</strong>，可借用定位开发很多功能</p>
+</li>
+</ul>
+<h2 id="2-开发工具"><a href="#2-开发工具" class="headerlink" title="2. 开发工具"></a>2. 开发工具</h2><ul>
+<li>现在的Android studio 已经更新到4的版本了，界面相比以前更美观，多了许多功能等，实际上手体验即可</li>
+</ul>
+<h2 id="3-资源文件"><a href="#3-资源文件" class="headerlink" title="3. 资源文件"></a>3. 资源文件</h2><h3 id="3-1-无需过多关心的文件"><a href="#3-1-无需过多关心的文件" class="headerlink" title="3.1 无需过多关心的文件"></a>3.1 无需过多关心的文件</h3><blockquote>
+<ul>
+<li>.gradle 和.idea </li>
+<li>build</li>
+<li>gradle：支持gradle自下载</li>
+<li> gradle.properties</li>
+<li>gradlew/gradlew.bat：第一个mac/Linux系统的，第二个win系统的</li>
+<li>xxx.iml：IDEA自生成</li>
+<li>setting.gradle</li>
+</ul>
+</blockquote>
+<h3 id="3-2-gitignore"><a href="#3-2-gitignore" class="headerlink" title="3.2 .gitignore"></a>3.2 .gitignore</h3><ul>
+<li>在这可指定啥目录不关联到git</li>
+</ul>
+<h3 id="3-3-local-properties"><a href="#3-3-local-properties" class="headerlink" title="3.3 local.properties"></a>3.3 local.properties</h3><ul>
+<li>本机的Android SDK路径，我之前把sdk安装到了d盘，那么这里就需要更改一下路径</li>
+</ul>
+<h3 id="3-4-app"><a href="#3-4-app" class="headerlink" title="3.4 app"></a>3.4 app</h3><ul>
+<li>build：不用理</li>
+<li>libs：使用到第三方jar包的时候放这</li>
+<li>androidTest：可在此对项目编写一些自动化测试</li>
+<li>main/java：所有java代码</li>
+<li>main/res：各种资源目录</li>
+<li>main/AndroidManifest.xml：项目的配置文件，四大组件、各种权限都要在这里注册</li>
+<li>test：另一种自动测试</li>
+<li>.gitignore：和上边的作用一样</li>
+<li>app.xml：IDEA自生成</li>
+<li>build.gradle</li>
+<li>proguard-rule.pro：指定代码的混淆规则，如果不希望代码被破解者容易阅读的话</li>
+</ul>
+<h3 id="3-5-build-gradle"><a href="#3-5-build-gradle" class="headerlink" title="3.5 build.gradle"></a>3.5 build.gradle</h3><ul>
+<li><p>AS是采用Gradle来构建整个项目的</p>
+<h4 id="3-5-1-外层"><a href="#3-5-1-外层" class="headerlink" title="3.5.1 外层"></a>3.5.1 外层</h4><p><img src="https://i.loli.net/2021/10/09/DB8MzgyZhnLJb9c.png"></p>
+</li>
+<li><p>由上图可以看出两处的repositories都包含google()和jcenter(),这是我们声明要引用这些代码仓库的开源项目</p>
+</li>
+<li><p>接下来dependencies处使用classpath声明了一个插件，是因为需要使用这样一个Android插件来利用Gradle构建项目（Gradle不是专为Android开发的）</p>
+</li>
+</ul>
+<h4 id="3-5-2-内层"><a href="#3-5-2-内层" class="headerlink" title="3.5.2 内层"></a>3.5.2 内层</h4><p><img src="https://i.loli.net/2021/10/09/xLc4mzpWFeaCDtv.png"></p>
+<h3 id="3-6-AndroidManifest-xml"><a href="#3-6-AndroidManifest-xml" class="headerlink" title="3.6 AndroidManifest.xml"></a>3.6 AndroidManifest.xml</h3><p><img src="https://i.loli.net/2021/10/09/rgW7vHw5SoplJfk.png"></p>
+<h3 id="3-7-res资源文件"><a href="#3-7-res资源文件" class="headerlink" title="3.7 res资源文件"></a>3.7 res资源文件</h3><p><img src="https://i.loli.net/2021/10/09/5rBj9DJGylaxQWv.png"></p>
+<h2 id="4-使用日志"><a href="#4-使用日志" class="headerlink" title="4. 使用日志"></a>4. 使用日志</h2><p>按升序的log级别</p>
+<ul>
+<li>Log.v()：verbose级别</li>
+<li>Log.d()：debug级别</li>
+<li>Log.i()：info级别</li>
+<li>Log.w()：warn级别</li>
+<li>Log.e()：error级别</li>
+</ul>
+<blockquote>
+<ul>
+<li><p>小tips</p>
+<p>可以使用logd+Tab/Enter，快捷编写日志打印</p>
+<p>可以在外部使用lodt+Tab/Enter，快捷编写String TAG私有类</p>
+</li>
+</ul>
+</blockquote>
+<p>相关链接：</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903897958449166#heading-15">探索 Android 内存优化方法 - 掘金 (juejin.cn)</a></p>
+<p><a target="_blank" rel="noopener" href="https://developer.android.com/guide/platform?hl=zh-cn">平台架构  | Android 开发者  | Android Developers</a></p>
 
                 
             </div>
@@ -523,7 +633,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://dyjcow.github.io/2021/12/14/hello-world/">https://dyjcow.github.io/2021/12/14/hello-world/</a>
+                    <a href="https://dyjcow.github.io/2021/12/14/di-yi-zhang-an-zhuo-kai-fa-zheng-ti-jie-shao-kai-shi-qi-cheng/">https://dyjcow.github.io/2021/12/14/di-yi-zhang-an-zhuo-kai-fa-zheng-ti-jie-shao-kai-shi-qi-cheng/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -560,7 +670,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Android/">
+                                    <span class="chip bg-color">Android</span>
+                                </a>
+                            
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -604,9 +722,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/12/14/di-yi-zhang-an-zhuo-kai-fa-zheng-ti-jie-shao-kai-shi-qi-cheng/">
                     <div class="card-image">
@@ -623,9 +742,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -638,6 +757,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -657,7 +777,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2021/12/14/hello-world/">
@@ -687,7 +807,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
