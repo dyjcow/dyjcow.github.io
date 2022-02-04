@@ -6,7 +6,7 @@
   <link href="https://dyjcow.github.io/atom.xml" rel="self"/>
   
   <link href="https://dyjcow.github.io/"/>
-  <updated>2021-12-14T14:26:26.527Z</updated>
+  <updated>2022-02-04T15:42:25.504Z</updated>
   <id>https://dyjcow.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>第二章 Activity(看得见的活动)|《第一行代码》笔记</title>
+    <link href="https://dyjcow.github.io/2022/02/04/di-er-zhang-activity-kan-de-jian-de-huo-dong/"/>
+    <id>https://dyjcow.github.io/2022/02/04/di-er-zhang-activity-kan-de-jian-de-huo-dong/</id>
+    <published>2022-02-04T15:27:00.000Z</published>
+    <updated>2022-02-04T15:42:25.504Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;第二章-Activity-看得见的活动&quot;&gt;&lt;a href=&quot;#第二章-Activity-看得见的活动&quot; class=&quot;headerlink&quot; title=&quot;第二章 Activity(看得见的活动)&quot;&gt;&lt;/a&gt;第二章</summary>
+        
+      
+    
+    
+    
+    <category term="Android第一行代码" scheme="https://dyjcow.github.io/categories/Android%E7%AC%AC%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81/"/>
+    
+    
+    <category term="Android" scheme="https://dyjcow.github.io/tags/Android/"/>
+    
+    <category term="Java" scheme="https://dyjcow.github.io/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>第一章 安卓开发整体介绍|《第一行代码》笔记</title>
