@@ -469,7 +469,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-02-04
+                    2022-02-05
                 </div>
                 
 
@@ -501,8 +501,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="第二章-Activity-看得见的活动"><a href="#第二章-Activity-看得见的活动" class="headerlink" title="第二章 Activity(看得见的活动)"></a>第二章 Activity(看得见的活动)</h2><h3 id="1-活动是什么"><a href="#1-活动是什么" class="headerlink" title="1. 活动是什么"></a>1. 活动是什么</h3><p>活动是一个包含用户界面的组件，可以理解为一个APP中的页面，是直接展示给用户的组件。</p>
-<h3 id="2-活动创建步骤"><a href="#2-活动创建步骤" class="headerlink" title="2.活动创建步骤"></a>2.活动创建步骤</h3><blockquote>
+                <h2 id="1-活动是什么"><a href="#1-活动是什么" class="headerlink" title="1. 活动是什么"></a>1. 活动是什么</h2><p>活动是一个包含用户界面的组件，可以理解为一个APP中的页面，是直接展示给用户的组件。</p>
+<h2 id="2-活动创建步骤"><a href="#2-活动创建步骤" class="headerlink" title="2.活动创建步骤"></a>2.活动创建步骤</h2><blockquote>
 <ol>
 <li>项目中new一个<code>Empty Activity</code>,勾选<code>Generate Layout File</code>为<code>Activity</code>自动创建一个布局文件</li>
 <li>在<strong>res/layout</strong>下找到与你刚创建的<code>Activity</code>绑定的布局文件，在布局文件中添加对应组件和编辑布局</li>
@@ -515,8 +515,7 @@
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>category</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>android.intent.category.LAUNCHER<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>intent-filter</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="3-活动的简单使用"><a href="#3-活动的简单使用" class="headerlink" title="3. 活动的简单使用"></a>3. 活动的简单使用</h3><ul>
-<li><h4 id="活动中使用Toast的代码"><a href="#活动中使用Toast的代码" class="headerlink" title="活动中使用Toast的代码"></a>活动中使用Toast的代码</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//直接在对应的FirstActivity中编辑下列</span>
+<h2 id="3-活动的简单使用"><a href="#3-活动的简单使用" class="headerlink" title="3. 活动的简单使用"></a>3. 活动的简单使用</h2><h3 id="3-1-活动中使用Toast的代码"><a href="#3-1-活动中使用Toast的代码" class="headerlink" title="3.1 活动中使用Toast的代码"></a>3.1 活动中使用Toast的代码</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//直接在对应的FirstActivity中编辑下列</span>
 <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token class-name">Bundle</span> savedInstanceState<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment">//在Activity创建阶段就创建绑定好显示型组件</span>
     <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span>savedInstanceState<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//重写方法的时候，继承原方法特性</span>
     <span class="token function">setContentView</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>layout<span class="token punctuation">.</span>first_layout<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//绑定布局文件</span>
@@ -529,8 +528,9 @@
                           <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_SHORT<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-<li><h4 id="活动中使用Menu的代码"><a href="#活动中使用Menu的代码" class="headerlink" title="活动中使用Menu的代码"></a>活动中使用Menu的代码</h4><blockquote>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3-2-活动中使用Menu的代码"><a href="#3-2-活动中使用Menu的代码" class="headerlink" title="3.2 活动中使用Menu的代码"></a>3.2 活动中使用Menu的代码</h3><blockquote>
 <p>到资源文件夹中新建<strong>menu</strong>文件夹，在该文件夹中新建<strong>menu</strong>资源文件</p>
 </blockquote>
 <pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token comment">&lt;!--menu资源文件，此处为简单试用，只需添加id和title属性--&gt;</span>
@@ -554,7 +554,7 @@
        <span class="token function">getMenuInflater</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">inflate</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>menu<span class="token punctuation">.</span>main<span class="token punctuation">,</span>menu<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//调用该方法绑定</span>
        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span><span class="token comment">//true为显示menu,false为不显示</span>
    <span class="token punctuation">}</span>
-  
+
    <span class="token annotation punctuation">@Override</span>
    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">onOptionsItemSelected</span><span class="token punctuation">(</span><span class="token annotation punctuation">@NonNull</span> <span class="token class-name">MenuItem</span> item<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">//重写该方法，定义菜单响应事件</span>
        <span class="token keyword">switch</span> <span class="token punctuation">(</span>item<span class="token punctuation">.</span><span class="token function">getItemId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -568,10 +568,10 @@
                <span class="token keyword">break</span><span class="token punctuation">;</span>
        <span class="token punctuation">}</span>
        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span><span class="token comment">//记得返true</span>
-   <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-</ul>
-<h3 id="4-使用Intent在活动中穿梭"><a href="#4-使用Intent在活动中穿梭" class="headerlink" title="4. 使用Intent在活动中穿梭"></a>4. 使用Intent在活动中穿梭</h3><ul>
-<li><h4 id="显式Intent"><a href="#显式Intent" class="headerlink" title="显式Intent"></a>显式Intent</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//新建SecondActivity之后，使用Intent从FirstActivity跳转到SecondActivity中</span>
+   <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<h2 id="4-使用Intent在活动中穿梭"><a href="#4-使用Intent在活动中穿梭" class="headerlink" title="4. 使用Intent在活动中穿梭"></a>4. 使用Intent在活动中穿梭</h2><h3 id="4-1-显式Intent"><a href="#4-1-显式Intent" class="headerlink" title="4.1 显式Intent"></a>4.1 显式Intent</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//新建SecondActivity之后，使用Intent从FirstActivity跳转到SecondActivity中</span>
 <span class="token comment">//修改FirstActivity为</span>
 	<span class="token annotation punctuation">@Override</span>
     <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token class-name">Bundle</span> savedInstanceState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -586,8 +586,11 @@
                 <span class="token function">startActivity</span><span class="token punctuation">(</span>intent<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//调用startActivity()重载</span>
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-<li><h4 id="隐式Intent"><a href="#隐式Intent" class="headerlink" title="隐式Intent"></a>隐式Intent</h4><blockquote>
+    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="4-2-隐式Intent"><a href="#4-2-隐式Intent" class="headerlink" title="4.2 隐式Intent"></a>4.2 隐式Intent</h3><blockquote>
 <p>概述：恰如其意，隐式调用不直接指明某一个类，而是指定<code>action</code>和<code>category</code>(类别)等信息，让系统去分析应该跳转到哪个app的哪个活动之中。</p>
 <p>注意：</p>
 <ol>
@@ -694,10 +697,7 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>application</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></blockquote>
 </li>
 </ul>
-</li>
-</ul>
-<ul>
-<li><h4 id="利用Intent向下一个活动传数据"><a href="#利用Intent向下一个活动传数据" class="headerlink" title="利用Intent向下一个活动传数据"></a>利用Intent向下一个活动传数据</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//FirstActivity</span>
+<h3 id="4-3-利用Intent向下一个活动传数据"><a href="#4-3-利用Intent向下一个活动传数据" class="headerlink" title="4.3 利用Intent向下一个活动传数据"></a>4.3 利用Intent向下一个活动传数据</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//FirstActivity</span>
 <span class="token annotation punctuation">@Override</span>
 <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token class-name">Bundle</span> savedInstanceState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span>savedInstanceState<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -733,8 +733,9 @@
         intent<span class="token punctuation">.</span><span class="token function">putExtra</span><span class="token punctuation">(</span><span class="token string">"param1"</span><span class="token punctuation">,</span> data1<span class="token punctuation">)</span><span class="token punctuation">;</span>
         intent<span class="token punctuation">.</span><span class="token function">putExtra</span><span class="token punctuation">(</span><span class="token string">"param2"</span><span class="token punctuation">,</span> data2<span class="token punctuation">)</span><span class="token punctuation">;</span>
         context<span class="token punctuation">.</span><span class="token function">startActivity</span><span class="token punctuation">(</span>intent<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-<li><h4 id="利用Intent向上一个活动返回数据"><a href="#利用Intent向上一个活动返回数据" class="headerlink" title="利用Intent向上一个活动返回数据"></a>利用Intent向上一个活动返回数据</h4><blockquote>
+    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-4-利用Intent向上一个活动返回数据"><a href="#4-4-利用Intent向上一个活动返回数据" class="headerlink" title="4.4 利用Intent向上一个活动返回数据"></a>4.4 利用Intent向上一个活动返回数据</h3><blockquote>
 <p><code>startActivityForResult(Intent intent,int requestCode )</code> 该方法也是用于启动活动的，但这个方法期望在下一个活动被销毁的时候能够返回一个结果给本活动。顾名思义，该函数声明本活动允许接受下一个活动返回的结果</p>
 </blockquote>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//FirstActivity</span>
@@ -800,12 +801,7 @@
 <p>温馨提示：最新的sdk中，<code>startActivityForResult</code>方法已经被弃用，想了解和掌握新的API使用方法，参照下面的两篇博客</p>
 <p><a target="_blank" rel="noopener" href="https://guolin.blog.csdn.net/article/details/121063078?spm=1001.2014.3001.5502">Activity Result API详解，是时候放弃startActivityForResult了_郭霖的专栏-CSDN博客</a></p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/hx7013/article/details/120916287?spm=1001.2014.3001.5502">startActivityForResult被标记为弃用后，如何优雅的启动Activity?_葫芦娃-CSDN博客</a></p>
-</li>
-</ul>
-<h3 id="5-活动的生命周期"><a href="#5-活动的生命周期" class="headerlink" title="5. 活动的生命周期"></a>5. 活动的生命周期</h3><ul>
-<li><h4 id="活动状态"><a href="#活动状态" class="headerlink" title="活动状态"></a>活动状态</h4><p><a target="_blank" rel="noopener" href="https://developer.android.google.cn/guide/components/activities/state-changes">官方指南</a></p>
-</li>
-</ul>
+<h2 id="5-活动的生命周期"><a href="#5-活动的生命周期" class="headerlink" title="5. 活动的生命周期"></a>5. 活动的生命周期</h2><h3 id="5-1-活动状态"><a href="#5-1-活动状态" class="headerlink" title="5.1 活动状态"></a>5.1 活动状态</h3><p><a target="_blank" rel="noopener" href="https://developer.android.google.cn/guide/components/activities/state-changes">官方指南</a></p>
 <blockquote>
 <ol>
 <li><strong>运行状态</strong>：活动处于栈顶的时候，系统最不愿回收</li>
@@ -814,16 +810,13 @@
 <li><strong>销毁状态</strong>：不在栈中的活动；即被<code>finish()</code>的活动，系统最愿意回收</li>
 </ol>
 </blockquote>
-<ul>
-<li><h4 id="活动的生存期"><a href="#活动的生存期" class="headerlink" title="活动的生存期"></a>活动的生存期</h4><p><a target="_blank" rel="noopener" href="https://developer.android.google.cn/guide/components/activities/activity-lifecycle">官方指南</a></p>
+<h4 id="5-2-活动的生存期"><a href="#5-2-活动的生存期" class="headerlink" title="5.2 活动的生存期"></a>5.2 活动的生存期</h4><p><a target="_blank" rel="noopener" href="https://developer.android.google.cn/guide/components/activities/activity-lifecycle">官方指南</a></p>
 <blockquote>
 <ol>
 <li><strong>完整生存期</strong></li>
 <li><strong>可见生存期</strong></li>
 </ol>
 </blockquote>
-</li>
-</ul>
 <p><img src="https://s2.loli.net/2022/02/04/TF1oHg4rf6bJdlx.png"></p>
 <blockquote>
 <ol>
@@ -836,8 +829,7 @@
 <li><code>onRestart()</code>  由<code>onStop()</code>变为<code>onStart()</code>前调用。即被覆盖的页面重新被打开的时候，需要被调用。</li>
 </ol>
 </blockquote>
-<ul>
-<li><h4 id="活动被回收怎么办"><a href="#活动被回收怎么办" class="headerlink" title="活动被回收怎么办"></a>活动被回收怎么办</h4><p>前言：当活动被回收之后，再次打开会使用到<code>onCreate()</code>而不是使用<code>onStart()</code>,这种情况下的活动是被重新创建的。当活动被重新创建，我们在页面中保存的数据（譬如输入文本框中的文字）会被清除掉，这样会严重影响用户的使用体验。</p>
+<h3 id="5-3-活动被回收怎么办"><a href="#5-3-活动被回收怎么办" class="headerlink" title="5.3 活动被回收怎么办"></a>5.3 活动被回收怎么办</h3><p>前言：当活动被回收之后，再次打开会使用到<code>onCreate()</code>而不是使用<code>onStart()</code>,这种情况下的活动是被重新创建的。当活动被重新创建，我们在页面中保存的数据（譬如输入文本框中的文字）会被清除掉，这样会严重影响用户的使用体验。</p>
 <p>解决方法(类似Intent)：</p>
 <ol>
 <li><p>使用<code>onSaveInstanceState()</code>回调方法，此方法保证活动被回收前一定会被调用。重写此方法能将被回收活动的数据保存下来,以便重新创建活动的时候能够复现出来。</p>
@@ -863,39 +855,29 @@
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
 <p>Tips:上例是Bundle数据的存储和取出方式。我们可以把Bundle数据存储到Intent中，然后借助Intent来进行数据传输</p>
-</li>
-</ul>
-<h3 id="6-活动的启动模式"><a href="#6-活动的启动模式" class="headerlink" title="6.活动的启动模式"></a>6.活动的启动模式</h3><blockquote>
-<p>我们可以通过在<strong>AndroidManifest.xml</strong>中给**<activity>**标签指定android:launchMode的属性，即可确定活动的启动方式</activity></p>
+<h2 id="6-活动的启动模式"><a href="#6-活动的启动模式" class="headerlink" title="6.活动的启动模式"></a>6.活动的启动模式</h2><blockquote>
+<p>我们可以通过在<strong>AndroidManifest.xml</strong>中给<activity>标签指定<strong>android:launchMode</strong>的属性，即可确定活动的启动方式</activity></p>
 </blockquote>
-<ul>
-<li><h4 id="standard"><a href="#standard" class="headerlink" title="standard"></a>standard</h4><blockquote>
+<h3 id="6-1-standard"><a href="#6-1-standard" class="headerlink" title="6.1 standard"></a>6.1 standard</h3><blockquote>
 <p>不会在乎活动是否在返回栈中存在，每次启动都会创建一个新的实例(系统默认的)</p>
 </blockquote>
 <p><img src="https://s2.loli.net/2022/02/04/WOzynQJ9FIBigtk.png"></p>
-</li>
-<li><h4 id="singleTop"><a href="#singleTop" class="headerlink" title="singleTop"></a>singleTop</h4><blockquote>
+<h3 id="6-2-singleTop"><a href="#6-2-singleTop" class="headerlink" title="6.2 singleTop"></a>6.2 singleTop</h3><blockquote>
 <p>启动的时候如果发现返回栈的栈顶是该活动，则不会启动新的，直接使用。否则，启动新的活动</p>
 </blockquote>
 <p><img src="https://s2.loli.net/2022/02/04/fFZL9GYj1pgHtI6.png"></p>
-</li>
-<li><h4 id="singleTask"><a href="#singleTask" class="headerlink" title="singleTask"></a>singleTask</h4><blockquote>
+<h3 id="6-3-singleTask"><a href="#6-3-singleTask" class="headerlink" title="6.3 singleTask"></a>6.3 singleTask</h3><blockquote>
 <p>每次启动该活动的时候，系统首先会在返回栈中检查是否存在该活动的实例，如果发现已经存在该活动的实例，则直接使用该实例，并把在这个活动之上的所有活动<strong>全部出栈</strong>。若不存在该实例，则创建一个新的活动实例。</p>
 </blockquote>
 <p><img src="https://s2.loli.net/2022/02/04/hR64fdV73tLTMJm.png"></p>
-</li>
-<li><h4 id="singleInstance"><a href="#singleInstance" class="headerlink" title="singleInstance"></a>singleInstance</h4><blockquote>
+<h3 id="6-4-singleInstance"><a href="#6-4-singleInstance" class="headerlink" title="6.4 singleInstance"></a>6.4 singleInstance</h3><blockquote>
 <p>假设我们的程序中有一个活动是<strong>允许其他程序调用</strong>的(例如从一个APP的广告页面点击到达购物软件的商品详情窗口)，我们需要实现其他程序和我们的程序可以共享这个活动的实例，就要使用到singleInstance。这个共享的实例有自己单独的一个返回栈来管理活动(譬如返回栈B)。</p>
 </blockquote>
 <p><img src="https://s2.loli.net/2022/02/04/Bv4Xoe2FJminxdU.png"></p>
-</li>
-</ul>
-<h3 id="7-活动的最佳实践"><a href="#7-活动的最佳实践" class="headerlink" title="7. 活动的最佳实践"></a>7. 活动的最佳实践</h3><ul>
-<li><h4 id="知晓当前活动"><a href="#知晓当前活动" class="headerlink" title="知晓当前活动"></a>知晓当前活动</h4><blockquote>
+<h2 id="7-活动的最佳实践"><a href="#7-活动的最佳实践" class="headerlink" title="7. 活动的最佳实践"></a>7. 活动的最佳实践</h2><h3 id="7-1-知晓当前活动"><a href="#7-1-知晓当前活动" class="headerlink" title="7.1 知晓当前活动"></a>7.1 知晓当前活动</h3><blockquote>
 <p>写<strong>BaseActivity</strong>,在该类中加入<code>Log.d("BaseActivity", getClass().getSimpleName());</code>；让所有的<strong>Activity</strong>继承<strong>BaseActivity</strong>，这样子就能每个<strong>Activity</strong>都打印出来了</p>
 </blockquote>
-</li>
-<li><h4 id="设置能随时退出程序"><a href="#设置能随时退出程序" class="headerlink" title="设置能随时退出程序"></a>设置能随时退出程序</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//ActivityCollector</span>
+<h3 id="7-2-设置能随时退出程序"><a href="#7-2-设置能随时退出程序" class="headerlink" title="7.2 设置能随时退出程序"></a>7.2 设置能随时退出程序</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//ActivityCollector</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ActivityCollector</span> <span class="token punctuation">{</span><span class="token comment">//此类用于管理活动，对活动入栈、出栈和清栈</span>
 
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Activity</span><span class="token punctuation">&gt;</span></span> activities <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -954,8 +936,9 @@
         <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-<li><h4 id="启动活动最佳写法"><a href="#启动活动最佳写法" class="headerlink" title="启动活动最佳写法"></a>启动活动最佳写法</h4><blockquote>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="7-3-启动活动最佳写法"><a href="#7-3-启动活动最佳写法" class="headerlink" title="7.3 启动活动最佳写法"></a>7.3 启动活动最佳写法</h3><blockquote>
 <p>优点：在实际合作开发对接中，让对接者直观了解启动本活动需要传递哪些数据</p>
 </blockquote>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//SecondActivity</span>
@@ -980,8 +963,10 @@
             <span class="token class-name">SecondActivity</span><span class="token punctuation">.</span><span class="token function">actionStart</span><span class="token punctuation">(</span><span class="token class-name">FirstActivity</span><span class="token punctuation">.</span><span class="token keyword">this</span><span class="token punctuation">,</span> <span class="token string">"data1"</span><span class="token punctuation">,</span> <span class="token string">"data2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-</ul>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
 
                 
             </div>
