@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>记一次hexo博客部署的问题</title>
+      <link href="/2022/04/10/ji-yi-ci-hexo-bo-ke-bu-shu-de-wen-ti/"/>
+      <url>/2022/04/10/ji-yi-ci-hexo-bo-ke-bu-shu-de-wen-ti/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前置条件："><a href="#前置条件：" class="headerlink" title="前置条件："></a>前置条件：</h2><ol><li>一台云服务器（已占用 127.0.0.1:3000 端口部署了网易云后端，并且反向代理到了服务器的 3000 端口）</li><li>在 GitHub 上面已经部署了 hexo 博客</li></ol><h2 id="配置连接"><a href="#配置连接" class="headerlink" title="配置连接"></a>配置连接</h2><blockquote><p>本地博客仓库和GitHub以及服务器仓库的连接</p></blockquote><p><a href="https://blog.meta-code.top/2021/11/20/2021-41/">【Hexo博客】部署到腾讯云轻量应用服务器（使用宝塔面板） | 百里飞洋 (meta-code.top)</a></p><ul><li><strong>遇到的 bug：</strong></li></ul><blockquote><pre class="line-numbers language-none"><code class="language-none"># 在本地电脑 Bash 窗口ssh -v git@SERVER# 注意！别直接复制SERVER这个单词！@后面替换成服务器IP<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>这一步，发现无法使用密钥连接到服务器</p><ul><li><p>解决：</p><p>本地的git连接Github配置了代理，把代理软件关闭就可以连接了</p></li></ul></blockquote><blockquote><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># Deployment（部署）</span><span class="token comment">## Docs: https://hexo.io/docs/one-command-deployment</span><span class="token key atrule">deploy</span><span class="token punctuation">:</span>  <span class="token key atrule">type</span><span class="token punctuation">:</span> git  <span class="token key atrule">repo</span><span class="token punctuation">:</span> git@你的服务器IP地址<span class="token punctuation">:</span>/home/git/repos/hexoBlog.git <span class="token comment">#服务器仓库地址</span>  <span class="token key atrule">branch</span><span class="token punctuation">:</span> master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>这一步中，由于，我有多个仓库，查阅hexo文档后，将此处配置成这样子</p><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># Deployment（部署）</span><span class="token comment">## Docs: https://hexo.io/docs/one-command-deployment</span><span class="token key atrule">deploy</span><span class="token punctuation">:</span> <span class="token key atrule">-type</span><span class="token punctuation">:</span> git  <span class="token key atrule">repo</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//xxxxx.git <span class="token comment">#GitHub仓库地址</span>  <span class="token key atrule">branch</span><span class="token punctuation">:</span> master<span class="token key atrule">deploy</span><span class="token punctuation">:</span> <span class="token key atrule">-type</span><span class="token punctuation">:</span> git  <span class="token key atrule">repo</span><span class="token punctuation">:</span> git@你的服务器IP地址<span class="token punctuation">:</span>/home/git/repos/hexoBlog.git <span class="token comment">#服务器仓库地址</span>  <span class="token key atrule">branch</span><span class="token punctuation">:</span> master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>但是问题来了，我的GitHub是需要代理的，服务器的就不需要。</p><p>在不使用代理的时候，有一个github登录框弹出，直接点密码登录，就可以直接上传了，但是GitHub仓库的上传不成功</p><p>后改为使用代理上传，就上传成功了</p></blockquote><h2 id="部署网站"><a href="#部署网站" class="headerlink" title="部署网站"></a>部署网站</h2><p>一般来说，资源文件上传好了，直接在宝塔的网站处点击部署，引到文件夹就可以了，但是我的老是不成功。</p><p><strong>解决历程</strong></p><ol><li>查阅博客后，猜测是 Nginx 的问题，尝试在宝塔重启 Nginx ，发现重启失败，报端口占用的错误（3000）端口</li><li>尝试kill掉占用3000端口的进程，是node占用，无法杀掉。是PM2管理器一直开启占用3000端口</li><li>多次尝试之后解决顺序是：在网站处<strong>删除</strong>（一定要删除）网易云后端的网站项目 -&gt; 重启 Nginx -&gt; 重新映射网易云后端的项目</li><li>再次查看是否能访问博客，发现还是不行。尝试重新解析域名，发现就可以了，腾讯云的解析也有些bug。</li></ol><p><strong>问题本质</strong>：</p><p>​    Nginx 无法正常运行</p><h2 id="Nginx更改"><a href="#Nginx更改" class="headerlink" title="Nginx更改"></a>Nginx更改</h2><p>部署后更改同端口的域名，nginx无法立即修改，需要重启nginx才可以完成修改，本地浏览器也需要刷新看到效果。发现添加域名后无法立即显示，重启nginx就可以解决。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 乱搞服务器 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 博客 </tag>
+            
+            <tag> 宝塔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>干货|进入工作室所需的储备</title>
       <link href="/2022/02/10/gan-huo-jin-ru-gong-zuo-shi-suo-xu-de-chu-bei/"/>
       <url>/2022/02/10/gan-huo-jin-ru-gong-zuo-shi-suo-xu-de-chu-bei/</url>

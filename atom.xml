@@ -6,7 +6,7 @@
   <link href="https://dyjcow.github.io/atom.xml" rel="self"/>
   
   <link href="https://dyjcow.github.io/"/>
-  <updated>2022-02-11T09:21:04.943Z</updated>
+  <updated>2022-04-10T07:45:42.784Z</updated>
   <id>https://dyjcow.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记一次hexo博客部署的问题</title>
+    <link href="https://dyjcow.github.io/2022/04/10/ji-yi-ci-hexo-bo-ke-bu-shu-de-wen-ti/"/>
+    <id>https://dyjcow.github.io/2022/04/10/ji-yi-ci-hexo-bo-ke-bu-shu-de-wen-ti/</id>
+    <published>2022-04-10T07:42:31.000Z</published>
+    <updated>2022-04-10T07:45:42.784Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前置条件：&quot;&gt;&lt;a href=&quot;#前置条件：&quot; class=&quot;headerlink&quot; title=&quot;前置条件：&quot;&gt;&lt;/a&gt;前置条件：&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;一台云服务器（已占用 127.0.0.1:3000 端口部署了网易云后端，并且反向代理到了服务器的</summary>
+        
+      
+    
+    
+    
+    <category term="乱搞服务器" scheme="https://dyjcow.github.io/categories/%E4%B9%B1%E6%90%9E%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    
+    <category term="博客" scheme="https://dyjcow.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="宝塔" scheme="https://dyjcow.github.io/tags/%E5%AE%9D%E5%A1%94/"/>
+    
+  </entry>
   
   <entry>
     <title>干货|进入工作室所需的储备</title>
