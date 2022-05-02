@@ -6,7 +6,7 @@
   <link href="https://dyjcow.github.io/atom.xml" rel="self"/>
   
   <link href="https://dyjcow.github.io/"/>
-  <updated>2022-04-10T07:45:42.784Z</updated>
+  <updated>2022-05-02T09:21:40.470Z</updated>
   <id>https://dyjcow.github.io/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法|前缀和解法</title>
+    <link href="https://dyjcow.github.io/2022/05/02/suan-fa-qian-zhui-he-jie-fa/"/>
+    <id>https://dyjcow.github.io/2022/05/02/suan-fa-qian-zhui-he-jie-fa/</id>
+    <published>2022-05-02T09:17:31.000Z</published>
+    <updated>2022-05-02T09:21:40.470Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;前置知识&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基本数据结构知识(数组)&lt;/li&gt;
+&lt;li&gt;Java中HashMap容器基本了解&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;文章目的&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;文章为</summary>
+        
+      
+    
+    
+    
+    <category term="算法笔记" scheme="https://dyjcow.github.io/categories/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="算法" scheme="https://dyjcow.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="前缀和" scheme="https://dyjcow.github.io/tags/%E5%89%8D%E7%BC%80%E5%92%8C/"/>
+    
+  </entry>
   
   <entry>
     <title>记一次hexo博客部署的问题</title>
