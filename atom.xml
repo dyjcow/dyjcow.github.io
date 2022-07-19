@@ -6,7 +6,7 @@
   <link href="https://dyjcow.github.io/atom.xml" rel="self"/>
   
   <link href="https://dyjcow.github.io/"/>
-  <updated>2022-07-17T03:05:06.538Z</updated>
+  <updated>2022-07-19T02:02:14.895Z</updated>
   <id>https://dyjcow.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数智天气App需求书</title>
+    <link href="https://dyjcow.github.io/2022/07/19/shu-zhi-tian-qi-app-xu-qiu-shu/"/>
+    <id>https://dyjcow.github.io/2022/07/19/shu-zhi-tian-qi-app-xu-qiu-shu/</id>
+    <published>2022-07-19T02:01:00.000Z</published>
+    <updated>2022-07-19T02:02:14.895Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;数智天气App需求书&quot;&gt;&lt;a href=&quot;#数智天气App需求书&quot; class=&quot;headerlink&quot; title=&quot;数智天气App需求书&quot;&gt;&lt;/a&gt;数智天气App需求书&lt;/h1&gt;&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="天气APP" scheme="https://dyjcow.github.io/categories/%E5%A4%A9%E6%B0%94APP/"/>
+    
+    
+    <category term="天气" scheme="https://dyjcow.github.io/tags/%E5%A4%A9%E6%B0%94/"/>
+    
+  </entry>
   
   <entry>
     <title>算法|双指针解决链表</title>

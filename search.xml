@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>数智天气App需求书</title>
+      <link href="/2022/07/19/shu-zhi-tian-qi-app-xu-qiu-shu/"/>
+      <url>/2022/07/19/shu-zhi-tian-qi-app-xu-qiu-shu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="数智天气App需求书"><a href="#数智天气App需求书" class="headerlink" title="数智天气App需求书"></a>数智天气App需求书</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>为促进组间合作交流以及锤炼技术，UI组和安卓组将合作开发一款天气APP。数据支持由 <code>和风天气</code> 提供开发者版本，我们需要基于该API打造一款好用实用的天气软件。</p><p><a href="https://dev.qweather.com/docs/api/">API开发文档 | 和风天气开发平台 (qweather.com)</a></p><p>开发出来后，将联名开源到GitHub，UI同学也可以开源到figma</p><h2 id="开发限制"><a href="#开发限制" class="headerlink" title="开发限制"></a>开发限制</h2><ol><li>由于我们使用的是开发者版本，未使用付费版本，所以会有些数据是无法获取的。下面列举这些数据</li></ol><blockquote><ul><li>格点天气API</li><li>历史数据API</li><li>热带气旋（台风）API</li><li>海洋API</li><li><a href="https://dev.qweather.com/docs/api/astronomy/solar-elevation-angle/">太阳高度角 - API | 和风天气开发平台 (qweather.com)</a></li><li><a href="https://dev.qweather.com/docs/api/astronomy/solar-radiation-hourly-forecast/">太阳辐射逐小时预报 - API | 和风天气开发平台 (qweather.com)</a></li></ul></blockquote><ol start="2"><li>其次设计的同学如果单独设计天气状态图标的话，需要对应下面这个表设计好，导出文件的时候也需对应好文件编号。下面给出对应的表</li></ol><p><a href="https://icons.qweather.com/icons/#sunny-fill">图标预览 | 和风天气图标 (qweather.com)</a></p><p>点击图标即可查看对应的编号</p><ol start="3"><li><p>很复杂的动画需要用到<a href="https://lottiefiles.com/">Free Lottie Animation Files, Tools &amp; Plugins - LottieFiles</a>这个平台</p><p>UI的同学可以根据平台规则画好动画后，上传到这个平台，然后我们去直接引用导入即可。</p><p><a href="https://lottiefiles.com/what-is-lottie">What is a Lottie animation? - LottieFiles</a></p><p><a href="https://lottiefiles.com/plugins/figma">LottieFiles for Figma Plugin - Enrich your designs with motion</a></p></li><li><p>软件要同时兼容中文和英文，白天和黑夜</p></li></ol><h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>这个软件我们不对功能做需求限制，UI的同学根据 <a href="https://dev.qweather.com/docs/api/">API开发文档 | 和风天气开发平台 (qweather.com)</a> 这个文档里面我们能用到的功能自行设计即可，你们可以参考各种天气APP，随意发挥想象来设计该软件。</p><p>由于每个数据都对应有网页的，UI的同学也可以设计点击事件，跳转出网页来查看更多信息。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 天气APP </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 天气 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>算法|双指针解决链表</title>
       <link href="/2022/07/17/he-bing-you-xu-lian-biao/"/>
       <url>/2022/07/17/he-bing-you-xu-lian-biao/</url>
