@@ -6,7 +6,7 @@
   <link href="https://dyjcow.github.io/atom.xml" rel="self"/>
   
   <link href="https://dyjcow.github.io/"/>
-  <updated>2022-07-19T02:02:14.895Z</updated>
+  <updated>2024-01-09T13:56:43.543Z</updated>
   <id>https://dyjcow.github.io/</id>
   
   <author>
@@ -17,43 +17,126 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>数智天气App需求书</title>
-    <link href="https://dyjcow.github.io/2022/07/19/shu-zhi-tian-qi-app-xu-qiu-shu/"/>
-    <id>https://dyjcow.github.io/2022/07/19/shu-zhi-tian-qi-app-xu-qiu-shu/</id>
-    <published>2022-07-19T02:01:00.000Z</published>
-    <updated>2022-07-19T02:02:14.895Z</updated>
+    <title>观察者模式及其应用|设计模式</title>
+    <link href="https://dyjcow.github.io/2023/05/25/guan-cha-zhe-mo-shi-ji-qi-ying-yong/"/>
+    <id>https://dyjcow.github.io/2023/05/25/guan-cha-zhe-mo-shi-ji-qi-ying-yong/</id>
+    <published>2023-05-24T18:55:00.000Z</published>
+    <updated>2024-01-09T13:56:43.543Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;数智天气App需求书&quot;&gt;&lt;a href=&quot;#数智天气App需求书&quot; class=&quot;headerlink&quot; title=&quot;数智天气App需求书&quot;&gt;&lt;/a&gt;数智天气App需求书&lt;/h1&gt;&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;观察者模式及其应用&quot;&gt;&lt;a href=&quot;#观察者模式及其应用&quot; class=&quot;headerlink&quot; title=&quot;观察者模式及其应用&quot;&gt;&lt;/a&gt;观察者模式及其应用&lt;/h1&gt;&lt;h2 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot;</summary>
         
       
     
     
     
-    <category term="天气APP" scheme="https://dyjcow.github.io/categories/%E5%A4%A9%E6%B0%94APP/"/>
+    <category term="设计模式" scheme="https://dyjcow.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
-    <category term="天气" scheme="https://dyjcow.github.io/tags/%E5%A4%A9%E6%B0%94/"/>
+    <category term="设计模式" scheme="https://dyjcow.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    <category term="23种常用设计模式" scheme="https://dyjcow.github.io/tags/23%E7%A7%8D%E5%B8%B8%E7%94%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
-    <title>算法|双指针解决链表</title>
-    <link href="https://dyjcow.github.io/2022/07/17/he-bing-you-xu-lian-biao/"/>
-    <id>https://dyjcow.github.io/2022/07/17/he-bing-you-xu-lian-biao/</id>
-    <published>2022-07-17T03:03:51.000Z</published>
-    <updated>2022-07-17T03:05:06.538Z</updated>
+    <title>工厂方法模式|设计模式</title>
+    <link href="https://dyjcow.github.io/2023/05/22/gong-han-fang-fa-mo-shi/"/>
+    <id>https://dyjcow.github.io/2023/05/22/gong-han-fang-fa-mo-shi/</id>
+    <published>2023-05-21T16:19:00.000Z</published>
+    <updated>2024-01-09T13:55:47.396Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;双指针链表题&quot;&gt;&lt;a href=&quot;#双指针链表题&quot; class=&quot;headerlink&quot; title=&quot;双指针链表题&quot;&gt;&lt;/a&gt;双指针链表题&lt;/h1&gt;&lt;p&gt;学习地址：&lt;a</summary>
+    <summary type="html">&lt;h1 id=&quot;工厂方法模式&quot;&gt;&lt;a href=&quot;#工厂方法模式&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="设计模式" scheme="https://dyjcow.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+    <category term="设计模式" scheme="https://dyjcow.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    <category term="23种常用设计模式" scheme="https://dyjcow.github.io/tags/23%E7%A7%8D%E5%B8%B8%E7%94%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>单例模式|设计模式</title>
+    <link href="https://dyjcow.github.io/2023/05/20/dan-li-mo-shi/"/>
+    <id>https://dyjcow.github.io/2023/05/20/dan-li-mo-shi/</id>
+    <published>2023-05-20T15:29:00.000Z</published>
+    <updated>2024-01-09T13:54:32.723Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;单例模式&quot;&gt;&lt;a href=&quot;#单例模式&quot; class=&quot;headerlink&quot; title=&quot;单例模式&quot;&gt;&lt;/a&gt;单例模式&lt;/h1&gt;&lt;h2 id=&quot;什么是单例&quot;&gt;&lt;a href=&quot;#什么是单例&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="设计模式" scheme="https://dyjcow.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+    <category term="设计模式" scheme="https://dyjcow.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    <category term="23种常用设计模式" scheme="https://dyjcow.github.io/tags/23%E7%A7%8D%E5%B8%B8%E7%94%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>迪米特原则|设计原则</title>
+    <link href="https://dyjcow.github.io/2023/05/11/di-mi-te-yuan-ze/"/>
+    <id>https://dyjcow.github.io/2023/05/11/di-mi-te-yuan-ze/</id>
+    <published>2023-05-10T16:36:00.000Z</published>
+    <updated>2024-01-09T13:43:11.506Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;迪米特原则-设计原则&quot;&gt;&lt;a href=&quot;#迪米特原则-设计原则&quot; class=&quot;headerlink&quot; title=&quot;迪米特原则|设计原则&quot;&gt;&lt;/a&gt;迪米特原则|设计原则&lt;/h1&gt;&lt;p&gt;持续创作，加速成长！这是我参与「掘金日新计划 · 10</summary>
+        
+      
+    
+    
+    
+    <category term="设计模式" scheme="https://dyjcow.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+    <category term="设计模式" scheme="https://dyjcow.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    <category term="设计原则" scheme="https://dyjcow.github.io/tags/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>算法|Rabin Karp 算法</title>
+    <link href="https://dyjcow.github.io/2022/11/17/rabin-karp-suan-fa/"/>
+    <id>https://dyjcow.github.io/2022/11/17/rabin-karp-suan-fa/</id>
+    <published>2022-11-17T14:10:00.000Z</published>
+    <updated>2024-01-09T13:30:06.800Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Rabin-Karp-算法&quot;&gt;&lt;a href=&quot;#Rabin-Karp-算法&quot; class=&quot;headerlink&quot; title=&quot;Rabin Karp 算法&quot;&gt;&lt;/a&gt;Rabin Karp 算法&lt;/h1&gt;&lt;p&gt;用 &lt;code&gt;R&lt;/code&gt;</summary>
         
       
     
@@ -64,175 +147,418 @@
     
     <category term="算法" scheme="https://dyjcow.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
-    <category term="双指针" scheme="https://dyjcow.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
+    <category term="Rabin Karp" scheme="https://dyjcow.github.io/tags/Rabin-Karp/"/>
     
   </entry>
   
   <entry>
-    <title>算法|前缀和解法</title>
-    <link href="https://dyjcow.github.io/2022/05/02/suan-fa-qian-zhui-he-jie-fa/"/>
-    <id>https://dyjcow.github.io/2022/05/02/suan-fa-qian-zhui-he-jie-fa/</id>
-    <published>2022-05-02T09:17:31.000Z</published>
-    <updated>2022-05-03T04:25:08.508Z</updated>
+    <title>业务系统的需求分析设计|设计模式</title>
+    <link href="https://dyjcow.github.io/2022/11/15/ye-wu-xi-tong-de-xu-qiu-fen-xi-she-ji/"/>
+    <id>https://dyjcow.github.io/2022/11/15/ye-wu-xi-tong-de-xu-qiu-fen-xi-she-ji/</id>
+    <published>2022-11-15T14:09:00.000Z</published>
+    <updated>2024-01-09T13:58:48.615Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;前置知识&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;基本数据结构知识(数组)&lt;/li&gt;
-&lt;li&gt;Java中HashMap容器基本了解&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;文章目的&lt;/strong&gt;：&lt;/p&gt;
-&lt;p&gt;文章为</summary>
+    <summary type="html">&lt;h1 id=&quot;业务系统的需求分析设计&quot;&gt;&lt;a href=&quot;#业务系统的需求分析设计&quot; class=&quot;headerlink&quot; title=&quot;业务系统的需求分析设计&quot;&gt;&lt;/a&gt;业务系统的需求分析设计&lt;/h1&gt;&lt;h2 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot;</summary>
         
       
     
     
     
-    <category term="算法笔记" scheme="https://dyjcow.github.io/categories/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
+    <category term="设计模式" scheme="https://dyjcow.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
-    <category term="算法" scheme="https://dyjcow.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    <category term="设计模式" scheme="https://dyjcow.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
-    <category term="前缀和" scheme="https://dyjcow.github.io/tags/%E5%89%8D%E7%BC%80%E5%92%8C/"/>
+    <category term="业务系统" scheme="https://dyjcow.github.io/tags/%E4%B8%9A%E5%8A%A1%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="需求分析设计" scheme="https://dyjcow.github.io/tags/%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E8%AE%BE%E8%AE%A1/"/>
     
   </entry>
   
   <entry>
-    <title>记一次hexo博客部署的问题</title>
-    <link href="https://dyjcow.github.io/2022/04/10/ji-yi-ci-hexo-bo-ke-bu-shu-de-wen-ti/"/>
-    <id>https://dyjcow.github.io/2022/04/10/ji-yi-ci-hexo-bo-ke-bu-shu-de-wen-ti/</id>
-    <published>2022-04-10T07:42:31.000Z</published>
-    <updated>2022-04-10T07:45:42.784Z</updated>
+    <title>View体系(下)|青训营笔记</title>
+    <link href="https://dyjcow.github.io/2022/10/10/view-ti-xi-xia/"/>
+    <id>https://dyjcow.github.io/2022/10/10/view-ti-xi-xia/</id>
+    <published>2022-10-10T05:41:00.000Z</published>
+    <updated>2024-01-09T14:06:53.206Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;前置条件：&quot;&gt;&lt;a href=&quot;#前置条件：&quot; class=&quot;headerlink&quot; title=&quot;前置条件：&quot;&gt;&lt;/a&gt;前置条件：&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;一台云服务器（已占用 127.0.0.1:3000 端口部署了网易云后端，并且反向代理到了服务器的</summary>
+    <summary type="html">&lt;h1 id=&quot;View体系-下-青训营笔记&quot;&gt;&lt;a href=&quot;#View体系-下-青训营笔记&quot; class=&quot;headerlink&quot;</summary>
         
       
     
     
     
-    <category term="乱搞服务器" scheme="https://dyjcow.github.io/categories/%E4%B9%B1%E6%90%9E%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <category term="View的事件体系" scheme="https://dyjcow.github.io/categories/View%E7%9A%84%E4%BA%8B%E4%BB%B6%E4%BD%93%E7%B3%BB/"/>
     
     
-    <category term="博客" scheme="https://dyjcow.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    <category term="青训营笔记" scheme="https://dyjcow.github.io/tags/%E9%9D%92%E8%AE%AD%E8%90%A5%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="宝塔" scheme="https://dyjcow.github.io/tags/%E5%AE%9D%E5%A1%94/"/>
+    <category term="View" scheme="https://dyjcow.github.io/tags/View/"/>
     
   </entry>
   
   <entry>
-    <title>干货|进入工作室所需的储备</title>
-    <link href="https://dyjcow.github.io/2022/02/10/gan-huo-jin-ru-gong-zuo-shi-suo-xu-de-chu-bei/"/>
-    <id>https://dyjcow.github.io/2022/02/10/gan-huo-jin-ru-gong-zuo-shi-suo-xu-de-chu-bei/</id>
-    <published>2022-02-10T09:22:00.000Z</published>
-    <updated>2022-02-11T09:21:04.943Z</updated>
+    <title>单一职责原则|设计原则</title>
+    <link href="https://dyjcow.github.io/2022/10/10/dan-yi-zhi-ze-yuan-ze/"/>
+    <id>https://dyjcow.github.io/2022/10/10/dan-yi-zhi-ze-yuan-ze/</id>
+    <published>2022-10-10T03:02:00.000Z</published>
+    <updated>2024-01-09T13:38:56.680Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;干货-进入工作室所需的储备&quot;&gt;&lt;a href=&quot;#干货-进入工作室所需的储备&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;单一职责原则-设计原则&quot;&gt;&lt;a href=&quot;#单一职责原则-设计原则&quot; class=&quot;headerlink&quot; title=&quot;单一职责原则|设计原则&quot;&gt;&lt;/a&gt;单一职责原则|设计原则&lt;/h1&gt;&lt;p&gt; 持续创作，加速成长！这是我参与「掘金日新计划 · 10</summary>
         
       
     
     
     
-    <category term="数智工作室" scheme="https://dyjcow.github.io/categories/%E6%95%B0%E6%99%BA%E5%B7%A5%E4%BD%9C%E5%AE%A4/"/>
+    <category term="设计模式" scheme="https://dyjcow.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
-    <category term="数智工作室" scheme="https://dyjcow.github.io/tags/%E6%95%B0%E6%99%BA%E5%B7%A5%E4%BD%9C%E5%AE%A4/"/>
+    <category term="设计模式" scheme="https://dyjcow.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
-    <category term="招新" scheme="https://dyjcow.github.io/tags/%E6%8B%9B%E6%96%B0/"/>
+    <category term="设计原则" scheme="https://dyjcow.github.io/tags/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/"/>
     
   </entry>
   
   <entry>
-    <title>减肥里的科学和How to 减肥</title>
-    <link href="https://dyjcow.github.io/2022/02/06/jian-fei-li-de-ke-xue-he-how-to-jian-fei/"/>
-    <id>https://dyjcow.github.io/2022/02/06/jian-fei-li-de-ke-xue-he-how-to-jian-fei/</id>
-    <published>2022-02-06T14:59:00.000Z</published>
-    <updated>2022-02-05T15:00:38.268Z</updated>
+    <title>六大原则之外的设计原则|设计原则</title>
+    <link href="https://dyjcow.github.io/2022/10/10/liu-da-yuan-ze-zhi-wai-de-she-ji-yuan-ze/"/>
+    <id>https://dyjcow.github.io/2022/10/10/liu-da-yuan-ze-zhi-wai-de-she-ji-yuan-ze/</id>
+    <published>2022-10-10T02:58:00.000Z</published>
+    <updated>2024-01-09T13:45:34.102Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;减肥里的科学和How-to-减肥&quot;&gt;&lt;a href=&quot;#减肥里的科学和How-to-减肥&quot; class=&quot;headerlink&quot; title=&quot;减肥里的科学和How to 减肥&quot;&gt;&lt;/a&gt;减肥里的科学和How to 减肥&lt;/h1&gt;&lt;h2</summary>
+    <summary type="html">&lt;h1 id=&quot;六大原则之外的设计原则-设计原则&quot;&gt;&lt;a href=&quot;#六大原则之外的设计原则-设计原则&quot; class=&quot;headerlink&quot;</summary>
         
       
     
     
     
-    <category term="科学减肥" scheme="https://dyjcow.github.io/categories/%E7%A7%91%E5%AD%A6%E5%87%8F%E8%82%A5/"/>
+    <category term="设计模式" scheme="https://dyjcow.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
-    <category term="减肥" scheme="https://dyjcow.github.io/tags/%E5%87%8F%E8%82%A5/"/>
+    <category term="设计模式" scheme="https://dyjcow.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    <category term="设计原则" scheme="https://dyjcow.github.io/tags/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/"/>
     
   </entry>
   
   <entry>
-    <title>第二章 Activity(看得见的活动)|《第一行代码》笔记</title>
-    <link href="https://dyjcow.github.io/2022/02/04/di-er-zhang-activity-kan-de-jian-de-huo-dong/"/>
-    <id>https://dyjcow.github.io/2022/02/04/di-er-zhang-activity-kan-de-jian-de-huo-dong/</id>
-    <published>2022-02-04T15:27:00.000Z</published>
-    <updated>2022-02-05T06:10:31.114Z</updated>
+    <title>接口隔离原则|设计原则</title>
+    <link href="https://dyjcow.github.io/2022/10/10/jie-kou-ge-chi-yuan-ze/"/>
+    <id>https://dyjcow.github.io/2022/10/10/jie-kou-ge-chi-yuan-ze/</id>
+    <published>2022-10-10T02:57:00.000Z</published>
+    <updated>2024-01-09T13:42:08.592Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;1-活动是什么&quot;&gt;&lt;a href=&quot;#1-活动是什么&quot; class=&quot;headerlink&quot; title=&quot;1. 活动是什么&quot;&gt;&lt;/a&gt;1.</summary>
+    <summary type="html">&lt;h1 id=&quot;接口隔离原则-设计原则&quot;&gt;&lt;a href=&quot;#接口隔离原则-设计原则&quot; class=&quot;headerlink&quot; title=&quot;接口隔离原则|设计原则&quot;&gt;&lt;/a&gt;接口隔离原则|设计原则&lt;/h1&gt;&lt;p&gt;持续创作，加速成长！这是我参与「掘金日新计划 · 10</summary>
         
       
     
     
     
-    <category term="Android第一行代码" scheme="https://dyjcow.github.io/categories/Android%E7%AC%AC%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81/"/>
+    <category term="设计模式" scheme="https://dyjcow.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
-    <category term="Android" scheme="https://dyjcow.github.io/tags/Android/"/>
+    <category term="设计模式" scheme="https://dyjcow.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
-    <category term="Java" scheme="https://dyjcow.github.io/tags/Java/"/>
+    <category term="设计原则" scheme="https://dyjcow.github.io/tags/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/"/>
     
   </entry>
   
   <entry>
-    <title>第一章 安卓开发整体介绍|《第一行代码》笔记</title>
-    <link href="https://dyjcow.github.io/2021/12/14/di-yi-zhang-an-zhuo-kai-fa-zheng-ti-jie-shao-kai-shi-qi-cheng/"/>
-    <id>https://dyjcow.github.io/2021/12/14/di-yi-zhang-an-zhuo-kai-fa-zheng-ti-jie-shao-kai-shi-qi-cheng/</id>
-    <published>2021-12-14T14:00:00.000Z</published>
-    <updated>2021-12-14T14:26:26.527Z</updated>
+    <title>里氏替换原则|设计原则</title>
+    <link href="https://dyjcow.github.io/2022/10/10/li-shi-ti-huan-yuan-ze/"/>
+    <id>https://dyjcow.github.io/2022/10/10/li-shi-ti-huan-yuan-ze/</id>
+    <published>2022-10-10T02:50:00.000Z</published>
+    <updated>2024-01-09T13:44:06.772Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot; title=&quot;1. 简介&quot;&gt;&lt;/a&gt;1. 简介&lt;/h2&gt;&lt;h3 id=&quot;1-1-系统架构&quot;&gt;&lt;a href=&quot;#1-1-系统架构&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;里氏替换原则-设计原则&quot;&gt;&lt;a href=&quot;#里氏替换原则-设计原则&quot; class=&quot;headerlink&quot; title=&quot;里氏替换原则|设计原则&quot;&gt;&lt;/a&gt;里氏替换原则|设计原则&lt;/h1&gt;&lt;p&gt;持续创作，加速成长！这是我参与「掘金日新计划 · 10</summary>
         
       
     
     
     
-    <category term="Android第一行代码" scheme="https://dyjcow.github.io/categories/Android%E7%AC%AC%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81/"/>
+    <category term="设计模式" scheme="https://dyjcow.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
-    <category term="Android" scheme="https://dyjcow.github.io/tags/Android/"/>
+    <category term="设计模式" scheme="https://dyjcow.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
-    <category term="Java" scheme="https://dyjcow.github.io/tags/Java/"/>
+    <category term="设计原则" scheme="https://dyjcow.github.io/tags/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>依赖反转原则|设计原则</title>
+    <link href="https://dyjcow.github.io/2022/10/10/yi-lai-fan-zhuan-yuan-ze/"/>
+    <id>https://dyjcow.github.io/2022/10/10/yi-lai-fan-zhuan-yuan-ze/</id>
+    <published>2022-10-10T02:30:00.000Z</published>
+    <updated>2024-01-09T13:46:58.772Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;依赖反转原则-设计原则&quot;&gt;&lt;a href=&quot;#依赖反转原则-设计原则&quot; class=&quot;headerlink&quot; title=&quot;依赖反转原则|设计原则&quot;&gt;&lt;/a&gt;依赖反转原则|设计原则&lt;/h1&gt;&lt;p&gt;持续创作，加速成长！这是我参与「掘金日新计划 · 10</summary>
+        
+      
+    
+    
+    
+    <category term="设计模式" scheme="https://dyjcow.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+    <category term="设计模式" scheme="https://dyjcow.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    <category term="设计原则" scheme="https://dyjcow.github.io/tags/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>EventBus封装到项目架构|青训营笔记</title>
+    <link href="https://dyjcow.github.io/2022/10/10/ru-he-feng-zhuang-eventbus/"/>
+    <id>https://dyjcow.github.io/2022/10/10/ru-he-feng-zhuang-eventbus/</id>
+    <published>2022-10-10T02:29:00.000Z</published>
+    <updated>2024-01-09T14:24:59.106Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;EventBus封装到项目架构&quot;&gt;&lt;a href=&quot;#EventBus封装到项目架构&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="架构" scheme="https://dyjcow.github.io/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+    <category term="青训营笔记" scheme="https://dyjcow.github.io/tags/%E9%9D%92%E8%AE%AD%E8%90%A5%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="实战" scheme="https://dyjcow.github.io/tags/%E5%AE%9E%E6%88%98/"/>
+    
+    <category term="架构" scheme="https://dyjcow.github.io/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>View体系(上)|青训营笔记</title>
+    <link href="https://dyjcow.github.io/2022/10/09/view-ti-xi-shang/"/>
+    <id>https://dyjcow.github.io/2022/10/09/view-ti-xi-shang/</id>
+    <published>2022-10-09T13:41:00.000Z</published>
+    <updated>2024-01-09T14:06:16.518Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;View体系-上-青训营笔记&quot;&gt;&lt;a href=&quot;#View体系-上-青训营笔记&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="View的事件体系" scheme="https://dyjcow.github.io/categories/View%E7%9A%84%E4%BA%8B%E4%BB%B6%E4%BD%93%E7%B3%BB/"/>
+    
+    
+    <category term="青训营笔记" scheme="https://dyjcow.github.io/tags/%E9%9D%92%E8%AE%AD%E8%90%A5%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="View" scheme="https://dyjcow.github.io/tags/View/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>继承和组合如何选择|设计基础</title>
+    <link href="https://dyjcow.github.io/2022/09/30/duo-yong-zu-he-shao-yong-ji-cheng/"/>
+    <id>https://dyjcow.github.io/2022/09/30/duo-yong-zu-he-shao-yong-ji-cheng/</id>
+    <published>2022-09-30T11:55:00.000Z</published>
+    <updated>2024-01-09T13:51:24.065Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;继承和组合如何选择-设计基础&quot;&gt;&lt;a href=&quot;#继承和组合如何选择-设计基础&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="设计模式" scheme="https://dyjcow.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+    <category term="设计模式" scheme="https://dyjcow.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    <category term="设计基础" scheme="https://dyjcow.github.io/tags/%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何理解代码中的抽象|设计基础</title>
+    <link href="https://dyjcow.github.io/2022/09/28/dai-ma-zhong-de-chou-xiang/"/>
+    <id>https://dyjcow.github.io/2022/09/28/dai-ma-zhong-de-chou-xiang/</id>
+    <published>2022-09-28T14:43:00.000Z</published>
+    <updated>2024-01-09T13:50:14.322Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;如何理解代码中的抽象&quot;&gt;&lt;a href=&quot;#如何理解代码中的抽象&quot; class=&quot;headerlink&quot; title=&quot;如何理解代码中的抽象&quot;&gt;&lt;/a&gt;如何理解代码中的抽象&lt;/h1&gt;&lt;h2 id=&quot;前置知识&quot;&gt;&lt;a href=&quot;#前置知识&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="设计模式" scheme="https://dyjcow.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+    <category term="设计模式" scheme="https://dyjcow.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    <category term="设计基础" scheme="https://dyjcow.github.io/tags/%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浅谈 Java 三大特性的意义|设计基础</title>
+    <link href="https://dyjcow.github.io/2022/09/26/qian-tan-java-san-da-te-xing/"/>
+    <id>https://dyjcow.github.io/2022/09/26/qian-tan-java-san-da-te-xing/</id>
+    <published>2022-09-26T11:51:00.000Z</published>
+    <updated>2024-01-09T13:52:38.113Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;浅谈-Java-三大特性的意义&quot;&gt;&lt;a href=&quot;#浅谈-Java-三大特性的意义&quot; class=&quot;headerlink&quot; title=&quot;浅谈 Java 三大特性的意义&quot;&gt;&lt;/a&gt;浅谈 Java 三大特性的意义&lt;/h1&gt;&lt;p&gt;&lt;code&gt;Java&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="设计模式" scheme="https://dyjcow.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+    <category term="设计模式" scheme="https://dyjcow.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    <category term="设计基础" scheme="https://dyjcow.github.io/tags/%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常用的面向过程风格的代码|设计基础</title>
+    <link href="https://dyjcow.github.io/2022/09/18/chang-yong-de-mian-xiang-guo-cheng-feng-ge-de-dai-ma/"/>
+    <id>https://dyjcow.github.io/2022/09/18/chang-yong-de-mian-xiang-guo-cheng-feng-ge-de-dai-ma/</id>
+    <published>2022-09-18T14:24:00.000Z</published>
+    <updated>2024-01-09T13:49:21.109Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;常用的面向过程风格的代码&quot;&gt;&lt;a href=&quot;#常用的面向过程风格的代码&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="设计模式" scheme="https://dyjcow.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+    <category term="设计模式" scheme="https://dyjcow.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    <category term="设计基础" scheme="https://dyjcow.github.io/tags/%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何让你的APP更智能|青训营笔记</title>
+    <link href="https://dyjcow.github.io/2022/09/02/ru-he-rang-ni-de-app-geng-zhi-neng/"/>
+    <id>https://dyjcow.github.io/2022/09/02/ru-he-rang-ni-de-app-geng-zhi-neng/</id>
+    <published>2022-09-02T14:26:00.000Z</published>
+    <updated>2024-01-09T14:26:24.019Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;如何让你的APP更智能-青训营笔记&quot;&gt;&lt;a href=&quot;#如何让你的APP更智能-青训营笔记&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Android实战" scheme="https://dyjcow.github.io/categories/Android%E5%AE%9E%E6%88%98/"/>
+    
+    
+    <category term="青训营笔记" scheme="https://dyjcow.github.io/tags/%E9%9D%92%E8%AE%AD%E8%90%A5%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="实战" scheme="https://dyjcow.github.io/tags/%E5%AE%9E%E6%88%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>极简抖音中的优化点|青训营笔记</title>
+    <link href="https://dyjcow.github.io/2022/08/26/ji-jian-dou-yin-de-zhong-de-you-hua-dian/"/>
+    <id>https://dyjcow.github.io/2022/08/26/ji-jian-dou-yin-de-zhong-de-you-hua-dian/</id>
+    <published>2022-08-26T02:52:00.000Z</published>
+    <updated>2024-01-09T14:23:21.139Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;极简抖音中的优化点-青训营笔记&quot;&gt;&lt;a href=&quot;#极简抖音中的优化点-青训营笔记&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Android实战" scheme="https://dyjcow.github.io/categories/Android%E5%AE%9E%E6%88%98/"/>
+    
+    
+    <category term="青训营笔记" scheme="https://dyjcow.github.io/tags/%E9%9D%92%E8%AE%AD%E8%90%A5%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="实战" scheme="https://dyjcow.github.io/tags/%E5%AE%9E%E6%88%98/"/>
+    
+    <category term="优化" scheme="https://dyjcow.github.io/tags/%E4%BC%98%E5%8C%96/"/>
     
   </entry>
   

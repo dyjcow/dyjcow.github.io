@@ -17,6 +17,8 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
+    
+
     <title>孺子牛</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -34,8 +36,6 @@
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 <link rel="alternate" href="/atom.xml" title="孺子牛" type="application/atom+xml">
 </head>
-
-
 
 
 <body>
@@ -439,6 +439,10 @@
 
 
 
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
 </div>
         </div>
     </div>
@@ -536,6 +540,44 @@
                     
 
                     
+                        <link rel="stylesheet" href="/libs/dplayer/DPlayer.min.css">
+<div class="video-player">
+    
+    <div class="title center-align">
+        <i class="fas fa-video-camera"></i>&nbsp;&nbsp;精彩视频
+    </div>
+    
+    <div class="row">
+		
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="dplayer" class="dplayer-video"
+                     style="height: 383px;"></div>
+        </div>
+		
+    </div>
+</div>
+
+<script src="/libs/dplayer/DPlayer.min.js"></script>
+<script>
+    $(function () {
+        new DPlayer({
+            container: document.getElementById('dplayer'),
+            autoplay: 'false' === 'true',
+            theme: '#42b983',
+            loop: 'false' === 'true',
+            lang: 'zh-CN' === 'zh-CN' ? 'zh-cn' : 'en',
+            preload: 'auto',
+            volume: Number('0.7'),
+            video: {
+                url: '/medias/videos/taylor.mkv',
+                pic: '',
+                thumbnails: ''
+            }
+        });
+    });
+</script>
+
+                    
 
                     
                     <div id="recommend-sections" class="recommend">
@@ -577,8 +619,8 @@
     
     <div class="col s12 m6" data-aos="zoom-in-up">
         
-             <div class="post-card" style="background-image: url('https://s2.loli.net/2022/02/10/nSxiYJXD1omh4us.jpg')">
-        
+            <div class="post-card" style="background-image: url('/medias/featureimages/23.jpg')">
+            
             <div class="post-body">
                 <div class="post-categories">
                     
@@ -625,30 +667,6 @@
     
     <div class="col s12" data-aos="zoom-in-up">
         
-            <div class="post-card" style="background-image: url('/medias/featureimages/5.jpg')">
-            
-            <div class="post-body">
-                <div class="post-categories">
-                    
-                        
-                            <a href="/categories/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/" class="category">算法笔记</a>
-                        
-                    
-                </div>
-                <a href="/2022/05/02/suan-fa-qian-zhui-he-jie-fa/">
-                    <h3 class="post-title">算法|前缀和解法</h3>
-                </a>
-                <p class="post-description">前缀和算法</p>
-                <a href="/2022/05/02/suan-fa-qian-zhui-he-jie-fa/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FFCC00 0%, #FF9500 100%)" target="_blank">
-                    <i class="icon far fa-eye fa-fw"></i>阅读更多
-                </a>
-            </div>
-        </div>
-    </div>
-    
-    
-    <div class="col s12 m6" data-aos="zoom-in-up">
-        
              <div class="post-card" style="background-image: url('https://i.loli.net/2021/10/09/iFWTetAq6OBwRZn.png')">
         
             <div class="post-body">
@@ -663,7 +681,31 @@
                     <h3 class="post-title">第二章 Activity(看得见的活动)|《第一行代码》笔记</h3>
                 </a>
                 <p class="post-description">Android入门篇</p>
-                <a href="/2022/02/04/di-er-zhang-activity-kan-de-jian-de-huo-dong/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%)" target="_blank">
+                <a href="/2022/02/04/di-er-zhang-activity-kan-de-jian-de-huo-dong/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FFCC00 0%, #FF9500 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="col s12 m6" data-aos="zoom-in-up">
+        
+            <div class="post-card" style="background-image: url('/medias/featureimages/5.jpg')">
+            
+            <div class="post-body">
+                <div class="post-categories">
+                    
+                        
+                            <a href="/categories/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/" class="category">算法笔记</a>
+                        
+                    
+                </div>
+                <a href="/2022/05/02/suan-fa-qian-zhui-he-jie-fa/">
+                    <h3 class="post-title">算法|前缀和解法</h3>
+                </a>
+                <p class="post-description">前缀和算法</p>
+                <a href="/2022/05/02/suan-fa-qian-zhui-he-jie-fa/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -691,32 +733,32 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/07/19/shu-zhi-tian-qi-app-xu-qiu-shu/">
+                    <a href="/2023/05/25/guan-cha-zhe-mo-shi-ji-qi-ying-yong/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="数智天气App需求书">
+                            <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="观察者模式及其应用|设计模式">
                             
-                            <span class="card-title">数智天气App需求书</span>
+                            <span class="card-title">观察者模式及其应用|设计模式</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                天气
+                                设计模式之观察者模式
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-25
                             </span>
                             <span class="publish-author">
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/%E5%A4%A9%E6%B0%94APP/" class="post-category">
-                                    天气APP
+                                <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-category">
+                                    设计模式
                                 </a>
                                 
                                 
@@ -727,8 +769,12 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E5%A4%A9%E6%B0%94/">
-                            <span class="chip bg-color">天气</span>
+                        <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+                            <span class="chip bg-color">设计模式</span>
+                        </a>
+                        
+                        <a href="/tags/23%E7%A7%8D%E5%B8%B8%E7%94%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+                            <span class="chip bg-color">23种常用设计模式</span>
                         </a>
                         
                     </div>
@@ -740,25 +786,184 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/07/17/he-bing-you-xu-lian-biao/">
+                    <a href="/2023/05/22/gong-han-fang-fa-mo-shi/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="算法|双指针解决链表">
+                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="工厂方法模式|设计模式">
                             
-                            <span class="card-title">算法|双指针解决链表</span>
+                            <span class="card-title">工厂方法模式|设计模式</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                双指针
+                                设计模式之工厂方法模式
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-22
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-category">
+                                    设计模式
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+                            <span class="chip bg-color">设计模式</span>
+                        </a>
+                        
+                        <a href="/tags/23%E7%A7%8D%E5%B8%B8%E7%94%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+                            <span class="chip bg-color">23种常用设计模式</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2023/05/20/dan-li-mo-shi/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="单例模式|设计模式">
+                            
+                            <span class="card-title">单例模式|设计模式</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                设计模式之单例模式
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-20
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-category">
+                                    设计模式
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+                            <span class="chip bg-color">设计模式</span>
+                        </a>
+                        
+                        <a href="/tags/23%E7%A7%8D%E5%B8%B8%E7%94%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+                            <span class="chip bg-color">23种常用设计模式</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2023/05/11/di-mi-te-yuan-ze/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="迪米特原则|设计原则">
+                            
+                            <span class="card-title">迪米特原则|设计原则</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                设计原则之迪米特原则
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-11
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-category">
+                                    设计模式
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+                            <span class="chip bg-color">设计模式</span>
+                        </a>
+                        
+                        <a href="/tags/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">
+                            <span class="chip bg-color">设计原则</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2022/11/17/rabin-karp-suan-fa/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="算法|Rabin Karp 算法">
+                            
+                            <span class="card-title">算法|Rabin Karp 算法</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Rabin Karp 算法
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-17
                             </span>
                             <span class="publish-author">
                                 
@@ -780,8 +985,8 @@
                             <span class="chip bg-color">算法</span>
                         </a>
                         
-                        <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/">
-                            <span class="chip bg-color">双指针</span>
+                        <a href="/tags/Rabin-Karp/">
+                            <span class="chip bg-color">Rabin Karp</span>
                         </a>
                         
                     </div>
@@ -793,32 +998,32 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/05/02/suan-fa-qian-zhui-he-jie-fa/">
+                    <a href="/2022/11/15/ye-wu-xi-tong-de-xu-qiu-fen-xi-she-ji/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="算法|前缀和解法">
+                            <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="业务系统的需求分析设计|设计模式">
                             
-                            <span class="card-title">算法|前缀和解法</span>
+                            <span class="card-title">业务系统的需求分析设计|设计模式</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                前缀和算法
+                                设计模式与业务系统的需求分析设计
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-15
                             </span>
                             <span class="publish-author">
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    算法笔记
+                                <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-category">
+                                    设计模式
                                 </a>
                                 
                                 
@@ -829,12 +1034,16 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">算法</span>
+                        <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+                            <span class="chip bg-color">设计模式</span>
                         </a>
                         
-                        <a href="/tags/%E5%89%8D%E7%BC%80%E5%92%8C/">
-                            <span class="chip bg-color">前缀和</span>
+                        <a href="/tags/%E4%B8%9A%E5%8A%A1%E7%B3%BB%E7%BB%9F/">
+                            <span class="chip bg-color">业务系统</span>
+                        </a>
+                        
+                        <a href="/tags/%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E8%AE%BE%E8%AE%A1/">
+                            <span class="chip bg-color">需求分析设计</span>
                         </a>
                         
                     </div>
@@ -846,32 +1055,35 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/04/10/ji-yi-ci-hexo-bo-ke-bu-shu-de-wen-ti/">
+                    <a href="/2022/10/10/view-ti-xi-xia/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="记一次hexo博客部署的问题">
+                            <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="View体系(下)|青训营笔记">
                             
-                            <span class="card-title">记一次hexo博客部署的问题</span>
+                            <span class="card-title">View体系(下)|青训营笔记</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                宝塔部署网站
+                                View体系(下)|青训营笔记这是我参与「第四届青训营 」笔记创作活动的的第4天
+熟悉完 View 的基础，了解完其分发流程，事件分发的传递规则。我们需要深入理解 View 的工作流程，包括绘制原理以及三大方法的流程，洞悉其原理和实现。
+
+
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-10
                             </span>
                             <span class="publish-author">
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/%E4%B9%B1%E6%90%9E%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="post-category">
-                                    乱搞服务器
+                                <a href="/categories/View%E7%9A%84%E4%BA%8B%E4%BB%B6%E4%BD%93%E7%B3%BB/" class="post-category">
+                                    View的事件体系
                                 </a>
                                 
                                 
@@ -882,12 +1094,12 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E5%8D%9A%E5%AE%A2/">
-                            <span class="chip bg-color">博客</span>
+                        <a href="/tags/%E9%9D%92%E8%AE%AD%E8%90%A5%E7%AC%94%E8%AE%B0/">
+                            <span class="chip bg-color">青训营笔记</span>
                         </a>
                         
-                        <a href="/tags/%E5%AE%9D%E5%A1%94/">
-                            <span class="chip bg-color">宝塔</span>
+                        <a href="/tags/View/">
+                            <span class="chip bg-color">View</span>
                         </a>
                         
                     </div>
@@ -899,31 +1111,32 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/02/10/gan-huo-jin-ru-gong-zuo-shi-suo-xu-de-chu-bei/">
+                    <a href="/2022/10/10/dan-yi-zhi-ze-yuan-ze/">
                         <div class="card-image">
                             
-                            <img src="https://s2.loli.net/2022/02/10/nSxiYJXD1omh4us.jpg" class="responsive-img" alt="干货|进入工作室所需的储备">
                             
-                            <span class="card-title">干货|进入工作室所需的储备</span>
+                            <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="单一职责原则|设计原则">
+                            
+                            <span class="card-title">单一职责原则|设计原则</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                招新
+                                设计原则之单一设计原则
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-10
                             </span>
                             <span class="publish-author">
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/%E6%95%B0%E6%99%BA%E5%B7%A5%E4%BD%9C%E5%AE%A4/" class="post-category">
-                                    数智工作室
+                                <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-category">
+                                    设计模式
                                 </a>
                                 
                                 
@@ -934,12 +1147,12 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E6%95%B0%E6%99%BA%E5%B7%A5%E4%BD%9C%E5%AE%A4/">
-                            <span class="chip bg-color">数智工作室</span>
+                        <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+                            <span class="chip bg-color">设计模式</span>
                         </a>
                         
-                        <a href="/tags/%E6%8B%9B%E6%96%B0/">
-                            <span class="chip bg-color">招新</span>
+                        <a href="/tags/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">
+                            <span class="chip bg-color">设计原则</span>
                         </a>
                         
                     </div>
@@ -951,31 +1164,32 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/02/06/jian-fei-li-de-ke-xue-he-how-to-jian-fei/">
+                    <a href="/2022/10/10/liu-da-yuan-ze-zhi-wai-de-she-ji-yuan-ze/">
                         <div class="card-image">
                             
-                            <img src="https://s2.loli.net/2022/02/05/jPKtNbUd5klfzQw.png" class="responsive-img" alt="减肥里的科学和How to 减肥">
                             
-                            <span class="card-title">减肥里的科学和How to 减肥</span>
+                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="六大原则之外的设计原则|设计原则">
+                            
+                            <span class="card-title">六大原则之外的设计原则|设计原则</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                减肥
+                                设计原则之六大原则之外的设计原则
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-10
                             </span>
                             <span class="publish-author">
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/%E7%A7%91%E5%AD%A6%E5%87%8F%E8%82%A5/" class="post-category">
-                                    科学减肥
+                                <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-category">
+                                    设计模式
                                 </a>
                                 
                                 
@@ -986,8 +1200,12 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E5%87%8F%E8%82%A5/">
-                            <span class="chip bg-color">减肥</span>
+                        <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+                            <span class="chip bg-color">设计模式</span>
+                        </a>
+                        
+                        <a href="/tags/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">
+                            <span class="chip bg-color">设计原则</span>
                         </a>
                         
                     </div>
@@ -999,31 +1217,32 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/02/04/di-er-zhang-activity-kan-de-jian-de-huo-dong/">
+                    <a href="/2022/10/10/jie-kou-ge-chi-yuan-ze/">
                         <div class="card-image">
                             
-                            <img src="https://i.loli.net/2021/10/09/iFWTetAq6OBwRZn.png" class="responsive-img" alt="第二章 Activity(看得见的活动)|《第一行代码》笔记">
                             
-                            <span class="card-title">第二章 Activity(看得见的活动)|《第一行代码》笔记</span>
+                            <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="接口隔离原则|设计原则">
+                            
+                            <span class="card-title">接口隔离原则|设计原则</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                Android入门篇
+                                设计原则之接口隔离原则
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-10
                             </span>
                             <span class="publish-author">
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/Android%E7%AC%AC%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81/" class="post-category">
-                                    Android第一行代码
+                                <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-category">
+                                    设计模式
                                 </a>
                                 
                                 
@@ -1034,12 +1253,12 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/Android/">
-                            <span class="chip bg-color">Android</span>
+                        <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+                            <span class="chip bg-color">设计模式</span>
                         </a>
                         
-                        <a href="/tags/Java/">
-                            <span class="chip bg-color">Java</span>
+                        <a href="/tags/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">
+                            <span class="chip bg-color">设计原则</span>
                         </a>
                         
                     </div>
@@ -1051,31 +1270,32 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/12/14/di-yi-zhang-an-zhuo-kai-fa-zheng-ti-jie-shao-kai-shi-qi-cheng/">
+                    <a href="/2022/10/10/li-shi-ti-huan-yuan-ze/">
                         <div class="card-image">
                             
-                            <img src="https://i.loli.net/2021/10/09/iFWTetAq6OBwRZn.png" class="responsive-img" alt="第一章 安卓开发整体介绍|《第一行代码》笔记">
                             
-                            <span class="card-title">第一章 安卓开发整体介绍|《第一行代码》笔记</span>
+                            <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="里氏替换原则|设计原则">
+                            
+                            <span class="card-title">里氏替换原则|设计原则</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                Android入门篇
+                                设计原则之里氏替换原则
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-10
                             </span>
                             <span class="publish-author">
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/Android%E7%AC%AC%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81/" class="post-category">
-                                    Android第一行代码
+                                <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-category">
+                                    设计模式
                                 </a>
                                 
                                 
@@ -1086,12 +1306,65 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/Android/">
-                            <span class="chip bg-color">Android</span>
+                        <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+                            <span class="chip bg-color">设计模式</span>
                         </a>
                         
-                        <a href="/tags/Java/">
-                            <span class="chip bg-color">Java</span>
+                        <a href="/tags/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">
+                            <span class="chip bg-color">设计原则</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2022/10/10/yi-lai-fan-zhuan-yuan-ze/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="依赖反转原则|设计原则">
+                            
+                            <span class="card-title">依赖反转原则|设计原则</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                设计原则之依赖反转原则
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-10
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-category">
+                                    设计模式
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+                            <span class="chip bg-color">设计模式</span>
+                        </a>
+                        
+                        <a href="/tags/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">
+                            <span class="chip bg-color">设计原则</span>
                         </a>
                         
                     </div>
@@ -1106,9 +1379,87 @@
 </main>
 
 
+<div class="container paging">
+    <div class="row">
+        <div class="col s6 m4 l4">
+            
+            <a class="left btn-floating btn-large disabled">
+                <i class="fas fa-angle-left"></i>
+            </a>
+            
+        </div>
+        <div class="page-info col m4 l4 hide-on-small-only">
+            <div class="center-align b-text-gray">1 / 4</div>
+        </div>
+        <div class="col s6 m4 l4">
+            
+            <a href="/page/2/"
+               class="right btn-floating btn-large waves-effect waves-light bg-color">
+                <i class="fas fa-angle-right"></i>
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+
 
 
     <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="330695641"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
     
 
     <div class="container row center-align"
@@ -1116,7 +1467,7 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2021-2023</span>
+                <span id="year">2021-2024</span>
             
             <a href="/about" target="_blank">DYJ</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
@@ -1124,7 +1475,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">18k</span>
+                        class="white-color">75.2k</span>
             
             
             
@@ -1241,6 +1592,10 @@
 
 
 
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
 
 </div>
     </div>
