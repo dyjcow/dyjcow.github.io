@@ -4,12 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Android 的架构演进, 孺子牛">
-    <meta name="description" content="Android 的架构演进持续创作，加速成长！这是我参与「掘金日新计划 · 10 月更文挑战」的第30天，点击查看活动详情
+    <meta name="keywords" content="与滑动冲突的首次邂逅, 孺子牛">
+    <meta name="description" content="与滑动冲突的首次邂逅持续创作，加速成长！这是我参与「掘金日新计划 · 10 月更文挑战」的第20天，点击查看活动详情
+前置知识
+了解 View 的分发事件(没了解也没事)
+有 Android 开发基础
 
-架构
-Android 需要哪些架构手段 - 掘金 (juejin.cn)
-Android 的架构演进 - 掘金 (">
+PS：本文写给未曾遇见过滑动冲突的 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -23,7 +24,7 @@ Android 的架构演进 - 掘金 (">
 
     
 
-    <title>Android 的架构演进 | 孺子牛</title>
+    <title>与滑动冲突的首次邂逅 | 孺子牛</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -316,12 +317,12 @@ Android 的架构演进 - 掘金 (">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Android 的架构演进</h1>
+                    <h1 class="description center-align post-title">与滑动冲突的首次邂逅</h1>
                 </div>
             </div>
         </div>
@@ -437,12 +438,12 @@ Android 的架构演进 - 掘金 (">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%9E%B6%E6%9E%84/">
-                                <span class="chip bg-color">架构</span>
+                            <a href="/tags/View/">
+                                <span class="chip bg-color">View</span>
                             </a>
                         
-                            <a href="/tags/%E6%9E%B6%E6%9E%84%E6%BC%94%E8%BF%9B/">
-                                <span class="chip bg-color">架构演进</span>
+                            <a href="/tags/%E6%BB%91%E5%8A%A8%E5%86%B2%E7%AA%81/">
+                                <span class="chip bg-color">滑动冲突</span>
                             </a>
                         
                     </div>
@@ -453,8 +454,8 @@ Android 的架构演进 - 掘金 (">
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%9E%B6%E6%9E%84/" class="post-category">
-                                架构
+                            <a href="/categories/View%E7%9A%84%E4%BA%8B%E4%BB%B6%E4%BD%93%E7%B3%BB/" class="post-category">
+                                View的事件体系
                             </a>
                         
                     </div>
@@ -466,7 +467,7 @@ Android 的架构演进 - 掘金 (">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-11-02
+                    2022-10-17
                 </div>
                 
 
@@ -480,14 +481,14 @@ Android 的架构演进 - 掘金 (">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.2k
+                    2.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    10 分
+                    8 分
                 </div>
                 
 
@@ -510,98 +511,127 @@ Android 的架构演进 - 掘金 (">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Android-的架构演进"><a href="#Android-的架构演进" class="headerlink" title="Android 的架构演进"></a>Android 的架构演进</h1><p>持续创作，加速成长！这是我参与「掘金日新计划 · 10 月更文挑战」的第30天，<a target="_blank" rel="noopener" href="https://juejin.cn/post/7147654075599978532">点击查看活动详情</a></p>
-<blockquote>
-<p>架构</p>
-<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7159583246794096670">Android 需要哪些架构手段 - 掘金 (juejin.cn)</a></p>
-<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7160309148888858638">Android 的架构演进 - 掘金 (juejin.cn)</a></p>
-</blockquote>
+                <h1 id="与滑动冲突的首次邂逅"><a href="#与滑动冲突的首次邂逅" class="headerlink" title="与滑动冲突的首次邂逅"></a>与滑动冲突的首次邂逅</h1><p>持续创作，加速成长！这是我参与「掘金日新计划 · 10 月更文挑战」的第20天，<a target="_blank" rel="noopener" href="https://juejin.cn/post/7147654075599978532">点击查看活动详情</a></p>
 <h2 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h2><ul>
-<li>已入门 Android </li>
-<li>了解过一些设计原则</li>
-<li>有 Android 项目经历</li>
+<li>了解 View 的分发事件(没了解也没事)</li>
+<li>有 Android 开发基础</li>
 </ul>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在 <a target="_blank" rel="noopener" href="https://juejin.cn/post/7159583246794096670">Android 需要哪些架构手段</a>一文中，我们讲述了一些我们需要了解学习的架构手段，我们已经学习到了一些常用的手段。那么对于一个项目、一个软件产品来说，我们的架构是如何跟随软件的生命周期来演进的呢？</p>
-<p>本文将带大家了解一下，一个架构是如何跟随软件的生命周期来演进的。</p>
-<p><img src="https://pic.lxtlovely.top/blog/Architecture_means-put5.png" alt="Architecture_means-put5"></p>
-<h2 id="一个架构如何基本成型的"><a href="#一个架构如何基本成型的" class="headerlink" title="一个架构如何基本成型的"></a>一个架构如何基本成型的</h2><p>当业务处于试点孕育阶段的时候，假如我们的功能很简单，只需要一个滑动的且可点击的列表。那么我们事实上并不需要多么复杂的架构，只需要一个单体的架构即可。<strong>何为单体架构呢？就是东西都塞一块，无需做模块分离</strong>。</p>
-<p>当过了试验阶段的孕育期，我们的产品功能开始变多了，我们开始需要加入账号体系，需要支持图文混排，需要对咨询内容可以点赞、收藏，需要引入多板块的内容，开始往咨询浏览产品的方向发展。这时我们便是进入了婴儿期。</p>
-<p>这个时候，我们不能再用单体架构了，我们需要开始使用分层的思想，将界面交互、业务逻辑和数据存储分离开来，让他们各自行驶自己的职责。同时，众多的业务需要多次使用网络和利用多线程，我们就需要封装抽离出网络模块和多线程处理功能。这时候，我们<strong>需要用到的就是分离架构了，上文中我们讲到的 MVX(MVC、MVP、MVVM) 就属于典型的分离结构</strong>。有兴趣的同学可以查看 <a target="_blank" rel="noopener" href="https://juejin.cn/post/7132504015908274213">带你封装MVP架构(上)</a> 一文。</p>
-<p>而当使用场景变得更多的时候，例如出现要加入视频流业务、加入课程业务的需求，那么我们需要将不同的业务场景拆离出来，使其成为独立的架构体系，每个架构体系之间再进行通信使其连接成一个 APP。这个阶段其实是处于学步期了，<strong>我们需要把各个业务模块化或者组件化，拆分出来成为独立的业务</strong>。而这里的模块化或者组件化自然就不是只针对业务的，还有很多中间层，中台之类的代码需要抽离出来，所以<strong>我们需要做好一套分层的架构</strong>，才能更好的降低耦合，实现业务。</p>
-<p><img src="https://pic.lxtlovely.top/blog/Architecture_means-put6.png" alt="Architecture_means-put6"></p>
-<p>这里简单给大家讲一下何为分层架构：分层架构是一套运用很广泛的架构模式，其最基础、最经典的设计包括如下几层：</p>
-<ul>
-<li><p>展示层：接收输入，呈现界面</p>
-</li>
-<li><p>业务层：处理业务数据，进行数据流转</p>
-</li>
-<li><p>持久层：连接下层数据，向上提供数据的增删查改</p>
-</li>
-<li><p>数据层：存储数据</p>
-<p>分层之后可以将各层之间隔离，每层之间只关注和实现自身的的需求即可，这样子可以很好的让有各自擅长点的人员分配去他们擅长的层级，且一般不会有层级的耦合。<strong>所以其优点是：结构清晰、利与管控，同时也方便人员分工。</strong></p>
-<p>分层架构由于结构分层明显，是很容易向里面不断加入层级的，加入层级又往往能解决出现的问题。这也就导致了会出现很多中间层级，同时很多时候加入层级就是因为我们原本的分层规定很严格，所以需要加入新的层级解决问题。由此，我们知道了<strong>其缺点是：层级管控严格造成灵活性低，从而使得会不断出现很多中间层，让架构层级很多。</strong></p>
-<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/012e7cd1fc44469f807b8f94a3707328~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp" alt="分层架构"></p>
-</li>
-</ul>
-<p>我们了解了分层架构的思想，那么在 Android 中是如何体现的呢，下面我将引用万表商城的分层图给大家展示以下一般在 Android 中的分层架构是怎么样的。</p>
-<p>我们可以看到前三层基本是一致的，但是在 Android 中一般没有数据层；数据层一般由 Android 内部提供，或者是继承在最底层的第三方库中了。</p>
-<p>当我们的项目发展到分层的阶段，我们的项目架构其实已经基本成型了，再往后的阶段就是对项目架构的优化了。</p>
-<p><img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/12/2/1676f7ebbf66136e~tplv-t2oaga2asx-zoom-in-crop-mark:4536:0:0:0.image" alt="万表架构"></p>
-<h2 id="架构的优化演进"><a href="#架构的优化演进" class="headerlink" title="架构的优化演进"></a>架构的优化演进</h2><h3 id="事件驱动架构"><a href="#事件驱动架构" class="headerlink" title="事件驱动架构"></a>事件驱动架构</h3><p>在我们的架构分了层级之后，各个业务和模块之间，可以抽离出一些公共的部分为其他业务或者功能提供服务。这时候我们的项目等于步入了青年期，需要使用到<strong>服务化的架构</strong>。例如抽离出视频播放能力，流媒体能力成为一个服务，将其提供给众多的调用方。在设计模式中所讲的 <code>IOC</code> ：控制反转模型，它就类似于服务化架构。其中<strong>调用方不直接依赖被调用方，而是依赖于抽象</strong>，这也符合依赖倒置的思想。</p>
-<p>Android 中，在上文中提到的服务管理，也是一个服务化的架构，对外只提供服务接口、隐藏具体实现，可以让调用者和提供者更加解耦。</p>
-<p><img src="https://pic.lxtlovely.top/blog/Architecture_means-put7_1.png" alt="Architecture_means-put7_1"></p>
-<p>而服务化架构的一种实现，就是<strong>事件驱动模型</strong></p>
-<p>在上述的服务化架构中，调用方和被调用方是基于抽象来调用的。那么这个抽象的实现形式怎么样才是最好的呢？这里给大家介绍事件驱动模型，用这个模型架构来解决服务化的抽象调用问题。</p>
-<p>在事件驱动架构中，主要包括 <code>Event</code> 、<code>Event Processor</code> 和 <code>Event Channel</code> 这三部分。其主要作用就是请求服务方和服务提供方之间，可以 <strong>无痛沟通</strong>。其思想是基于订阅者模式和责任链模式。</p>
-<ul>
-<li>Event：事件。请求服务方请求服务的时候，会发出一个事件。这个事件具象到 Android 中就是某种点击事件或者某种事件变化。</li>
-<li>Event Processor：事件处理器。事件的消费者或者订阅者，会接收到事件，可以选择自行消费或者交由其他消费者消费掉。</li>
-<li>Event Channel：事件队列。类似于菜市场，所有的事件都交由这个队列售卖，对应的订阅者获取到它来进行消费。</li>
-</ul>
-<p>我们使用过的 <code>EventBus</code> 或者 <code>RXjava</code> 就是类似这种的模型。其<strong>优点</strong>是适用广泛，可以拓展出很多的变种，且其支持消息的异步处理；而<strong>缺点</strong>则是消息过多之后很容易膨胀，且处理事件的链路的不明晰，使得我们的理解成本会很高。</p>
-<p><img src="https://pic.lxtlovely.top/blog/20221030212442.png"></p>
-<p>下面的一张图片，是一个事件驱动架构的实例，可以很好的展示其各级分发和调用的特点。</p>
-<p>我们可以看到，下面的事件并不是直接就被订阅消费的了，而是在订阅之后又会再次派发，直到出现了可以消费该事件的处理器。</p>
-<p>而下面不同处理器之间的互通，使用的通信机制可以是：Binder、Handler 或者是 Broadcast 等，这些都是可以进行跨进程通信的。</p>
-<p><img src="https://pic.lxtlovely.top/blog/20221030213349.png"></p>
-<h3 id="微内核架构"><a href="#微内核架构" class="headerlink" title="微内核架构"></a>微内核架构</h3><p>在我们的业务愈发扩大的时候，我们的产品进入了壮年期，出现了很多非刚需的业务。例如我们的一些灰度测试、一些实现组的模型，或者一些其他想要动态化发布的业务，我们不需要它一开始在安装的时候就出现，而是在使用过程中在动态安装下来。需要实现这种功能的时候，我们应该怎么办呢？这个时候，我们应该使用的是<strong>宿主-插件架构</strong>，这在 Android 中就是我们经常听的插件化。使用插件化，动态下发 APK，实现灵活可插拔的功能。</p>
-<p>而宿主-插件架构的一个实现，就是 <strong>微内核架构</strong> ，将插件注册到内核，由内核加载调度。下图中的右侧就是微内核的示意图。</p>
-<ul>
-<li>Core System：宿主容器。不含盖业务逻辑，它是提供给不同的业务插件运行在其中的一个运行环境。</li>
-<li>Plug-in Component：插件。这是具体的业务实现，通过挂载到宿主容器中运行。</li>
-</ul>
-<p>在 Android 中由于要实现四大组件，其方案便是：要在宿主容器中预埋四大组件(提供四大组件的桩函数)，在插件中调用这些桩能力。这样子就可以在插件中实现四大组件了。</p>
-<p>微内核架构的优缺点如下：</p>
-<p><strong>优点</strong>：</p>
-<ul>
-<li>高拓展性，可做到随意加载业务</li>
-<li>插件隔离化，其实和组件化，模块化一样具有解耦能力，但是它是天然解耦，无法被随意调用的，且其多了动态下发的能力</li>
-</ul>
-<p><strong>缺点</strong>：</p>
-<ul>
-<li>对宿主要求高，且其不易拓展，宿主是运行环境，需要时较为固定的</li>
-<li>插件的注册和通信机制较为复杂，需要宿主做通信派发</li>
-</ul>
-<p><img src="https://pic.lxtlovely.top/blog/Architecture_means-put8.png" alt="Architecture_means-put8"></p>
-<h3 id="微服务架构"><a href="#微服务架构" class="headerlink" title="微服务架构"></a>微服务架构</h3><p>当业务和团队逐渐稳定的时候，我们的产品进入了稳定期，这个是时候由于前期快速开发、业务快速增长，会出现很多之前留下来的问题，包括冗余的业务代码、有限制改动的地方等等。这个阶段我们就需要去解决这些问题了，需要使用到的手段是 <strong>领域驱动架构</strong>。 </p>
-<p>所谓邻域驱动，是以领域专家和问题域为驱动，在特定的领域(问题域)去解决相对小的问题。其中，领域专家会使用特定的领域语言，可能是某种约定的标记语言或者特定文本。例如小程序是某个特定的问题域，由小程序的专家去解决和将其隔离开来。我们就只需要请求调起小程序，由小程序闭环去使用和解决其对应的问题。</p>
-<p>领域驱动架构中使用的实例是：<strong>微服务架构</strong></p>
-<p>这里的微服务和后端所说的微服务是一样道理的，但是在这里我们所解决的问题并非和服务端要实现的负载均衡一模一样。这里的微服务还能解决一些异构问题，串联不同平台开发的服务，使得其合并到一起使用。</p>
-<ul>
-<li>Client Requests：服务发起方。以某种方式发送请求。例如点击跳转出小程序。</li>
-<li>Broker：服务调度。将请求放置于对应的微服务节点上面去处理</li>
-<li>Service Component：微服务。是高度内聚的模块，对外暴露出接口。在服务被使用之前，该服务需要被注册到服务中心中。</li>
-</ul>
-<p>这里的微服务架构和 IOC 不同的地方是，IOC 是为同构服务，微服务可以服务于异构模型。所谓异构，就是使用不同语言，运行于不同平台。</p>
-<p><img src="https://pic.lxtlovely.top/blog/Architecture_means-put9.png" alt="Architecture_means-put9"></p>
-<p>本文到此就结束了，文章从产品的雏形期讲述到产品的稳定期，希望这个过程能让你更加了解一个产品对应的架构演化过程。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_39128265/article/details/100859125">什么是单体架构_小猴子3000的博客-CSDN博客_单体架构</a></p>
-<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7011854392827756557">Android工程师，不理解模块化、组件化、插件化的区别怎么行？ - 掘金 (juejin.cn)</a></p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/40353581">一篇文章读懂分层架构 - 知乎 (zhihu.com)</a></p>
-<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6994997061351374861">软件架构模式之分层架构 - 掘金 (juejin.cn)</a></p>
-<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903729452302350">万表商城Android架构演进 - 掘金 (juejin.cn)</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/ruanrunxue/article/details/124052722">从分层架构到微服务架构（五）之服务化架构_元闰子的博客-CSDN博客_服务化架构</a></p>
-<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7123529478558613512#heading-47">【Android 客户端专场 学习资料三】第四届字节跳动青训营 - 掘金 (juejin.cn)</a></p>
+<p>PS：本文写给未曾遇见过滑动冲突的 Android 初学者，当然也欢迎大佬们对我指点一二☺️</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>如果你是一名Android 新手，那么你很可能没有遇见过滑动冲突，甚至不知道滑动冲突是什么？那是因为你的业务需求可能还不够复杂，作为一名初学者，没有将多种组件结合使用，那自然就没有遇见到滑动冲突了。</p>
+<p>但是，滑动冲突等到遇到的时候再去翻阅资料、学习处理，那么就会显得过于仓惶。所以本篇文章，我将用一个简单的案例，带你来一场与滑动冲突的完美邂逅。</p>
+<p>PS：本篇不会尚详细展开讲解滑动冲突的各种场景和全面的解决思路，在后续的文章才会进行详细讲解。</p>
+<h2 id="邂逅时刻"><a href="#邂逅时刻" class="headerlink" title="邂逅时刻"></a>邂逅时刻</h2><p>前面我们说到，滑动冲突的出现，是基于较为复杂的<strong>组合应用场景</strong>。下面，我提出一个稍微复杂一点的需求，而这个需求直接实现之后，是会出现滑动冲突的。</p>
+<p>需求描述是这样子的：我需要在一个页面中，展示三个榜单(电影榜，电视剧榜，综艺榜)，这三个榜单分别是通过点击导航栏或者左右滑动展示出来，并且榜单可以上下滑动来查看更多的榜单数据。</p>
+<p>根据上述的需求，我们会想到：导航栏可以使用 <code>TabLayout</code> ，榜单左右滑动使用 <code>Viewpager</code>  载入<code>Fragment</code> ，点击展示的话就吧 <code>TabLayout</code> 和 <code>Viewpager</code> 联动即可。最后的榜单上下滑动查看数据，我们可以在 <code>Fragment</code> 里面载入 <code>NestedScrollView</code> 做纵向的页面滚动。</p>
+<p>想好了实现的方法，我们可以将这个功能实现出来啦，实现的效果如下：</p>
+<img src="https://pic.lxtlovely.top/blog/Screenshot_20221017_221930_com.qxy.potatos.jpg" style="zoom: 50%;">
+
+<p>上述实现具体可参考<a target="_blank" rel="noopener" href="https://juejin.cn/column/7123962702619213854">第四届青训营 </a>这个专栏，具体代码<a target="_blank" rel="noopener" href="https://github.com/dyjcow/qxy_potato">在此处</a>。</p>
+<p>但是当我们实现之后，我们会发现，这个功能不顺手。怎么不顺手呢？就是当我有时想下滑的时候，他变成了左右滑动了，而一般突变为左右滑动的触发点是我快速滑动的时候。我们可以看一下下方的动图。</p>
+<p>下图中，以同样的角度滑动，<strong>慢滑动</strong>的时候，事件被子View捕获，实现的是 <code>子View</code> 的<strong>上下滑动</strong>。</p>
+<p>而<strong>快速滑动</strong>的时候，事件被父布局的View捕获，实现的是外层 <code>ViewPager2</code> 的<strong>左右滑动</strong>。</p>
+<p><img src="https://pic.lxtlovely.top/blog/SVID_20221017_221642_1.gif"></p>
+<p>是的，这种情况，就是<strong>滑动冲突</strong>。具体来说是，我们的左右滑动和上下滑动发送冲突了，导致软件<strong>无法判别清楚我们是想执行哪一种滑动命令</strong>。当然，上面的滑动冲突并不是很重大，不会影响业务，只会<strong>影响体验</strong>罢了。</p>
+<p>作为一名负责人的 coder，与滑动冲突的相遇只是开始时刻，若没有产生知识的沉淀或是使得问题被解决，必然不能算一场美好的相遇啦！</p>
+<p>所以，让我们一起来体验一把如何解决这个问题，提高用户使用体验吧。</p>
+<h2 id="问题的解决"><a href="#问题的解决" class="headerlink" title="问题的解决"></a>问题的解决</h2><p>在这里，笔者先笼统的告知你，滑动冲突的解决大致分为：<strong>外部解决法和内部解决法</strong>。而其原理，就是基于前文<a target="_blank" rel="noopener" href="https://juejin.cn/post/7123962969095929893">View体系(上)|青训营笔记 - 掘金 (juejin.cn)</a>中讲到的事件分发机制了。这里我引用其一小段代码简要的说明下其分发机制。</p>
+<p><code>View</code> 的事件分发是，首先 <code>View</code> 层层分发下来，若是 <code>onInterceptTouchEvent(ev)</code> 为 <code>true</code> 就拦截，为 <code>false</code> 就继续下发。</p>
+<p>当某一层级拦截后，就调用 <code>onTouchEvent(event)</code> 来处理，若是该层无法处理，就传递给父层的 <code>onTouchEvent(event)</code> 来处理。如此层层传递直到有对应可以处理的父层。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//伪代码</span>
+<span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">dispatchTouchEvent</span><span class="token punctuation">(</span><span class="token class-name">MotionEvent</span> ev<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">boolean</span> result <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">onInterceptTouchEvent</span><span class="token punctuation">(</span>ev<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        result <span class="token operator">=</span> <span class="token function">onTouchEvent</span><span class="token punctuation">(</span>ev<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+        result <span class="token operator">=</span> child<span class="token punctuation">.</span><span class="token function">dispatchTouchEvent</span><span class="token punctuation">(</span>ev<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/db32eef138a24231b31fa37033737128~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp" alt="img"></p>
+<p>现在我们再次说回这两种解决方法，其中重写 <code>onInterceptTouchEvent()</code> 方法就是<strong>外部解决法</strong>，重写 <code>dispatchTouchEvent()</code> 就是<strong>内部解决法</strong></p>
+<p>我们这里选用的是 <strong>内部解决法</strong>。在下面的代码中，如果你是小白，那无需很深刻的理解我解决的过程，大致了解即可。</p>
+<p>我们分析上面的需求得出，产生冲突的是  <code>Viewpager</code> 和 <code>NestedScrollView</code> ；而由于我们使用的是  <code>Viewpager2</code> ，其没有默认解决滑动冲突，且无法继承，所以我们选择使用 <code>NestedScrollView</code> 来解决。所以选用的是  <strong>内部解决法</strong>。</p>
+<p>下面给出重写代码：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">NestedScrollViewVP</span> <span class="token keyword">extends</span> <span class="token class-name">NestedScrollView</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">NestedScrollViewVP</span><span class="token punctuation">(</span><span class="token annotation punctuation">@NonNull</span> <span class="token class-name">Context</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">NestedScrollViewVP</span><span class="token punctuation">(</span><span class="token annotation punctuation">@NonNull</span> <span class="token class-name">Context</span> context<span class="token punctuation">,</span> <span class="token annotation punctuation">@Nullable</span> <span class="token class-name">AttributeSet</span> attrs<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> attrs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">NestedScrollViewVP</span><span class="token punctuation">(</span><span class="token annotation punctuation">@NonNull</span> <span class="token class-name">Context</span> context<span class="token punctuation">,</span> <span class="token annotation punctuation">@Nullable</span> <span class="token class-name">AttributeSet</span> attrs<span class="token punctuation">,</span>
+                              <span class="token keyword">int</span> defStyleAttr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> attrs<span class="token punctuation">,</span> defStyleAttr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">int</span> startX<span class="token punctuation">,</span> startY<span class="token punctuation">;</span>
+    <span class="token keyword">boolean</span> isDisallowIntercept <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">dispatchTouchEvent</span><span class="token punctuation">(</span><span class="token class-name">MotionEvent</span> ev<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+        <span class="token keyword">switch</span> <span class="token punctuation">(</span>ev<span class="token punctuation">.</span><span class="token function">getAction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">case</span> <span class="token class-name">MotionEvent</span><span class="token punctuation">.</span>ACTION_DOWN<span class="token operator">:</span>
+                startX <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> ev<span class="token punctuation">.</span><span class="token function">getX</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                startY <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> ev<span class="token punctuation">.</span><span class="token function">getY</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token function">getParent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">requestDisallowInterceptTouchEvent</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//告诉viewgroup不要去拦截我</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token class-name">MotionEvent</span><span class="token punctuation">.</span>ACTION_MOVE<span class="token operator">:</span>
+                <span class="token keyword">int</span> endX <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> ev<span class="token punctuation">.</span><span class="token function">getX</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">int</span> endY <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> ev<span class="token punctuation">.</span><span class="token function">getY</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                <span class="token keyword">int</span> disX <span class="token operator">=</span> endX <span class="token operator">-</span> startX<span class="token punctuation">;</span>
+                <span class="token keyword">int</span> disY <span class="token operator">=</span> endY <span class="token operator">-</span> startY<span class="token punctuation">;</span>
+                <span class="token comment">//角度正确，则让上层view别拦截我的事件</span>
+                <span class="token keyword">float</span> r <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span><span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span>disY<span class="token punctuation">)</span><span class="token operator">/</span><span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span>disX<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>r <span class="token operator">&gt;</span> <span class="token number">0.6f</span><span class="token punctuation">)</span> isDisallowIntercept <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+                <span class="token function">getParent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">requestDisallowInterceptTouchEvent</span><span class="token punctuation">(</span>isDisallowIntercept<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token class-name">MotionEvent</span><span class="token punctuation">.</span>ACTION_UP<span class="token operator">:</span>
+            <span class="token keyword">case</span> <span class="token class-name">MotionEvent</span><span class="token punctuation">.</span>ACTION_CANCEL<span class="token operator">:</span>
+                isDisallowIntercept <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+                <span class="token function">getParent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">requestDisallowInterceptTouchEvent</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">default</span><span class="token operator">:</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">dispatchTouchEvent</span><span class="token punctuation">(</span>ev<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>上面的而代码中，我们继承了 <code>NestedScrollView</code> 之后，主要对 <code>dispatchTouchEvent()</code> 方法进行了重写。修改逻辑大致如下</p>
+<ol>
+<li>在 <strong>ACTION_DOWN</strong> 中，记录手指触发的初始位置，然后请求父View不对事件做拦截，默认先把事件传递给  <code>NestedScrollView</code> 。</li>
+<li>在 <strong>ACTION_MOVE</strong> 中，计算当前的位置与初始位置形成的角度，如果它的正切值大于 0.6 则认为这是上下滑动的命令，需要父View不对事件做拦截。</li>
+<li>在 <strong>ACTION_UP</strong> 和 <strong>ACTION_CANCEL</strong> 中，则请求父View进行事件拦截，让其回到默认的状态。</li>
+</ol>
+<p>上面有一点<strong>需要注意</strong>：在上述的代码中，我们设置了一个变量 <code>isDisallowIntercept</code> 来<strong>记录是否阻止父View拦截事件</strong>。这个变量的设置<strong>很重要</strong>，它达到的效果是记录是否发生纵向滑动；如果<strong>有发生纵向滑动</strong>就请求父View禁止拦截事件，让事件都交给 <code>NestedScrollView</code> 处理，这样子连续的上下滑动就不会被判断为左右滑动了。</p>
+<p>为何不设置这样子一个变量就会被判断为左右滑动呢？请看下图，首次滑动的<strong>轨迹1</strong>是被判断为纵向滑动的，而<strong>轨迹2</strong>我们直观上去是纵向滑动，但是实际上系统记录的起点-&gt;终点的轨迹是<strong>红色轨迹</strong>，因为起点是一直不变的，这也就导致了轨迹2被判定为横向滑动。所以我们需要一个变量来记录第一次滑动的方向，以供很好的判断。</p>
+<p>这个方法中，我们只需要考虑捕获纵向滑动的事件，让纵向滑动不会被误判为横向滑动就行，而<strong>不用考虑横变纵的问题</strong>。因为触发横向滑动后，是被父View拦截处理的，一旦父View拦截后，<code>NestedScrollView</code> 中的事件就直接变为 <strong>ACTION_CANCEL</strong> 类型了，<code>NestedScrollView</code> 中的事件分发方法直接不会被执行了。</p>
+<p>所以，经过上述的处理，该页面在每次触点按下之后，只要触点不离开，那么处理事件的布局就不会变化。</p>
+<p><img src="https://pic.lxtlovely.top/blog/20221018173941.png"></p>
+<p>最后，我们在布局文件中引用我们的修改的子类即可。</p>
+<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>com.qxy.potatos.module.videorank.myview.NestedScrollViewVP</span>
+        <span class="token attr-name"><span class="token namespace">android:</span>layout_width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>match_parent<span class="token punctuation">"</span></span>
+        <span class="token attr-name"><span class="token namespace">android:</span>layout_height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>match_parent<span class="token punctuation">"</span></span>
+        <span class="token attr-name"><span class="token namespace">app:</span>layout_behavior</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@string/appbar_scrolling_view_behavior<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>com.qxy.potatos.module.videorank.myview.NestedScrollViewVP</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>下面是解决了冲突之后的效果，以及不会出现纵向滑动变成横向滑动的问题了，体验感得到极大的提升。</p>
+<p><img src="https://pic.lxtlovely.top/blog/SVID_20221017_221835_1.gif"></p>
+<p>如上所示，我们完美解决了它的滑动冲突，提高了用户体验。</p>
+<p>从本文中，你也学到了何为滑动冲突，且窥探了大致的解决过程。算是初试滑动冲突，实现了从<strong>0到1的进步</strong>！</p>
+<p>后续我们会继续讲解滑动冲突的原理以及解决方法，<strong>敬请期待</strong>！</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://www.apowersoft.cn/video-to-gif-online">免费在线视频转Gif，动图制作一键完成 (apowersoft.cn)</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7123962969095929893">View体系(上)|青训营笔记 - 掘金 (juejin.cn)</a></p>
 
                 
             </div>
@@ -628,7 +658,7 @@ Android 的架构演进 - 掘金 (">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://dyjcow.github.io/2022/11/02/android-zhong-de-jia-gou-yan-jin/">https://dyjcow.github.io/2022/11/02/android-zhong-de-jia-gou-yan-jin/</a>
+                    <a href="https://dyjcow.github.io/2022/10/17/yu-hua-dong-chong-tu-de-shou-ci-xie-hou/">https://dyjcow.github.io/2022/10/17/yu-hua-dong-chong-tu-de-shou-ci-xie-hou/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -666,12 +696,12 @@ Android 的架构演进 - 掘金 (">
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%9E%B6%E6%9E%84/">
-                                    <span class="chip bg-color">架构</span>
+                                <a href="/tags/View/">
+                                    <span class="chip bg-color">View</span>
                                 </a>
                             
-                                <a href="/tags/%E6%9E%B6%E6%9E%84%E6%BC%94%E8%BF%9B/">
-                                    <span class="chip bg-color">架构演进</span>
+                                <a href="/tags/%E6%BB%91%E5%8A%A8%E5%86%B2%E7%AA%81/">
+                                    <span class="chip bg-color">滑动冲突</span>
                                 </a>
                             
                         </div>
@@ -989,31 +1019,31 @@ Android 的架构演进 - 掘金 (">
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/11/15/ye-wu-xi-tong-de-xu-qiu-fen-xi-she-ji/">
+                <a href="/2022/10/18/dai-ni-ta-ru-kotlin-da-men-er/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="业务系统的需求分析设计|设计模式">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="带你踏入kotlin大门(二)|基本功_变量篇">
                         
-                        <span class="card-title">业务系统的需求分析设计|设计模式</span>
+                        <span class="card-title">带你踏入kotlin大门(二)|基本功_变量篇</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            设计模式与业务系统的需求分析设计
+                            
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-11-15
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-10-18
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-category">
-                                    设计模式
+                            <a href="/categories/kotlin/" class="post-category">
+                                    kotlin
                                 </a>
                             
                             
@@ -1023,16 +1053,8 @@ Android 的架构演进 - 掘金 (">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
-                        <span class="chip bg-color">设计模式</span>
-                    </a>
-                    
-                    <a href="/tags/%E4%B8%9A%E5%8A%A1%E7%B3%BB%E7%BB%9F/">
-                        <span class="chip bg-color">业务系统</span>
-                    </a>
-                    
-                    <a href="/tags/%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E8%AE%BE%E8%AE%A1/">
-                        <span class="chip bg-color">需求分析设计</span>
+                    <a href="/tags/kotlin/">
+                        <span class="chip bg-color">kotlin</span>
                     </a>
                     
                 </div>
@@ -1046,13 +1068,13 @@ Android 的架构演进 - 掘金 (">
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/11/01/android-xu-yao-na-xie-jia-gou-shou-duan/">
+                <a href="/2022/10/16/dai-ni-ta-ru-kotlin-da-men-yi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Android 需要哪些架构手段">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="带你踏入Kotlin大门(一)|kotlin初识">
                         
-                        <span class="card-title">Android 需要哪些架构手段</span>
+                        <span class="card-title">带你踏入Kotlin大门(一)|kotlin初识</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1063,14 +1085,14 @@ Android 的架构演进 - 掘金 (">
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-16
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%9E%B6%E6%9E%84/" class="post-category">
-                                    架构
+                            <a href="/categories/kotlin/" class="post-category">
+                                    kotlin
                                 </a>
                             
                             
@@ -1080,12 +1102,8 @@ Android 的架构演进 - 掘金 (">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%9E%B6%E6%9E%84/">
-                        <span class="chip bg-color">架构</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%9E%B6%E6%9E%84%E7%A7%8D%E7%B1%BB/">
-                        <span class="chip bg-color">架构种类</span>
+                    <a href="/tags/kotlin/">
+                        <span class="chip bg-color">kotlin</span>
                     </a>
                     
                 </div>

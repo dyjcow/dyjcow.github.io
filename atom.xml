@@ -156,7 +156,7 @@
     <link href="https://dyjcow.github.io/2023/04/05/tu-yuan-ma-du-dong-view-de-measure-fang-fa/"/>
     <id>https://dyjcow.github.io/2023/04/05/tu-yuan-ma-du-dong-view-de-measure-fang-fa/</id>
     <published>2023-04-05T13:03:00.000Z</published>
-    <updated>2024-01-10T03:43:37.885Z</updated>
+    <updated>2024-01-10T05:31:34.972Z</updated>
     
     
       
@@ -175,33 +175,6 @@
     <category term="View" scheme="https://dyjcow.github.io/tags/View/"/>
     
     <category term="View的工作原理" scheme="https://dyjcow.github.io/tags/View%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深入了解View的滑动冲突</title>
-    <link href="https://dyjcow.github.io/2023/04/05/shen-ru-liao-jie-view-de-hua-dong-chong-tu/"/>
-    <id>https://dyjcow.github.io/2023/04/05/shen-ru-liao-jie-view-de-hua-dong-chong-tu/</id>
-    <published>2023-04-05T09:20:00.000Z</published>
-    <updated>2024-01-10T03:38:28.131Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;深入了解View的滑动冲突&quot;&gt;&lt;a href=&quot;#深入了解View的滑动冲突&quot; class=&quot;headerlink&quot; title=&quot;深入了解View的滑动冲突&quot;&gt;&lt;/a&gt;深入了解View的滑动冲突&lt;/h1&gt;&lt;p&gt;持续创作，加速成长！这是我参与「掘金日新计划 ·</summary>
-        
-      
-    
-    
-    
-    <category term="View的事件体系" scheme="https://dyjcow.github.io/categories/View%E7%9A%84%E4%BA%8B%E4%BB%B6%E4%BD%93%E7%B3%BB/"/>
-    
-    
-    <category term="View" scheme="https://dyjcow.github.io/tags/View/"/>
-    
-    <category term="滑动冲突" scheme="https://dyjcow.github.io/tags/%E6%BB%91%E5%8A%A8%E5%86%B2%E7%AA%81/"/>
     
   </entry>
   
@@ -264,7 +237,7 @@
     <link href="https://dyjcow.github.io/2023/03/10/tan-xi-android-zhong-de-si-lei-xing-neng-you-hua/"/>
     <id>https://dyjcow.github.io/2023/03/10/tan-xi-android-zhong-de-si-lei-xing-neng-you-hua/</id>
     <published>2023-03-10T15:17:00.000Z</published>
-    <updated>2024-01-10T03:22:55.566Z</updated>
+    <updated>2024-01-10T05:29:46.968Z</updated>
     
     
       
@@ -488,7 +461,7 @@
     <link href="https://dyjcow.github.io/2022/10/25/qian-tan-android-de-liu-chang-xing-you-hua-an-li-fen-xiang/"/>
     <id>https://dyjcow.github.io/2022/10/25/qian-tan-android-de-liu-chang-xing-you-hua-an-li-fen-xiang/</id>
     <published>2022-10-25T04:51:00.000Z</published>
-    <updated>2024-01-10T03:30:33.117Z</updated>
+    <updated>2024-01-10T05:27:55.147Z</updated>
     
     
       
@@ -565,6 +538,31 @@
     <category term="性能" scheme="https://dyjcow.github.io/tags/%E6%80%A7%E8%83%BD/"/>
     
     <category term="流畅性" scheme="https://dyjcow.github.io/tags/%E6%B5%81%E7%95%85%E6%80%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>带你踏入Kotlin大门(六)|基本功_接口和特殊类篇</title>
+    <link href="https://dyjcow.github.io/2022/10/24/dai-ni-ta-ru-kotlin-da-men-liu/"/>
+    <id>https://dyjcow.github.io/2022/10/24/dai-ni-ta-ru-kotlin-da-men-liu/</id>
+    <published>2022-10-24T14:58:00.000Z</published>
+    <updated>2024-01-10T02:53:12.160Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;带你踏入Kotlin大门-六-基本功-接口和特殊类篇&quot;&gt;&lt;a href=&quot;#带你踏入Kotlin大门-六-基本功-接口和特殊类篇&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="kotlin" scheme="https://dyjcow.github.io/categories/kotlin/"/>
+    
+    
+    <category term="kotlin" scheme="https://dyjcow.github.io/tags/kotlin/"/>
     
   </entry>
   
