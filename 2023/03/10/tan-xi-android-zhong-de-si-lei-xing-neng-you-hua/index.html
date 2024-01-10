@@ -1,0 +1,1626 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="探析Android中的四类性能优化, 孺子牛">
+    <meta name="description" content="探析Android中的四类性能优化持续创作，加速成长！这是我参与「掘金日新计划 · 10 月更文挑战」的第23天，点击查看活动详情
+
+性能优化系列文章
+初识性能优化 - 掘金 (juejin.cn)
+探析Android中的四类性能优化 - ">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    
+
+    <title>探析Android中的四类性能优化 | 孺子牛</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="孺子牛" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">孺子牛</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">孺子牛</div>
+        <div class="logo-desc">
+            
+            Come From 2021
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/dyjcow" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/dyjcow" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">探析Android中的四类性能优化</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E4%BC%98%E5%8C%96/">
+                                <span class="chip bg-color">优化</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%80%A7%E8%83%BD/">
+                                <span class="chip bg-color">性能</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="post-category">
+                                性能优化
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-03-10
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2024-01-10
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3.8k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    13 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="探析Android中的四类性能优化"><a href="#探析Android中的四类性能优化" class="headerlink" title="探析Android中的四类性能优化"></a>探析Android中的四类性能优化</h1><p>持续创作，加速成长！这是我参与「掘金日新计划 · 10 月更文挑战」的第23天，<a target="_blank" rel="noopener" href="https://juejin.cn/post/7147654075599978532">点击查看活动详情</a></p>
+<blockquote>
+<p>性能优化系列文章</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7156240670615666719">初识性能优化 - 掘金 (juejin.cn)</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7157352645110759437">探析Android中的四类性能优化 - 掘金 (juejin.cn)</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7157709505046773790">浅谈Android的流畅性优化——归因分析 - 掘金 (juejin.cn)</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7158095081726017567">浅谈Android的流畅性优化——案例分享 - 掘金 (juejin.cn)</a></p>
+</blockquote>
+<h2 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h2><ul>
+<li>有Android开发基础</li>
+<li>了解Android运行原理</li>
+</ul>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在上一篇文章 <a target="_blank" rel="noopener" href="https://juejin.cn/post/7156240670615666719">初识性能优化</a> 中我们提到我们需要从<strong>流畅性优化</strong>、<strong>资源优化</strong>、<strong>稳定性优化</strong> 和 <strong>系统级优化</strong> 这四个层面来对Android中的软件做优化。但是我们只是简单的对其进行介绍，以及举了一些流畅性优化的实战例子。下面，我们就对这四类优化点展开进行讲解(文章参数理论和原因，无实战 demo 展示)。</p>
+<h2 id="流畅性优化"><a href="#流畅性优化" class="headerlink" title="流畅性优化"></a>流畅性优化</h2><h3 id="主线程模型"><a href="#主线程模型" class="headerlink" title="主线程模型"></a>主线程模型</h3><p>了解 Android 的流畅性优化之前，我们需要先了解Android的线程结构。在 Android 中，有一个<strong>主线程模型</strong>，其中所有的绘制以及交互都是在主线程中进行的，所以，当我们编写的某类代码是需要在主线程中运行的，那么这类代码必然会影响到我们的绘制等，继而影响到流畅性问题。</p>
+<p>下图之中，展示了我们哪类代码操作代码是会影响到主线程。</p>
+<p><img src="https://pic.lxtlovely.top/blog/Thread_struct_pic-put.png"></p>
+<ol>
+<li><p><strong>System Events(系统事件)</strong></p>
+<p>例如需要关闭、开启某个页面，这些都是需要通知我们的系统的来完成的，这些就是系统事件。它会触发到主线程的耗时操作。</p>
+</li>
+<li><p><strong>Input Events(输入事件)</strong></p>
+<p>输入事件并非指单纯的在输入框输入信息的事件，而是在手机上进行操作。因为手机本身可以被抽象的指代为一个输入输出的设备。在触摸屏上任意的点击都是一个输入事件，它都是在主线程中完成的，具体的流程可以查阅 <a target="_blank" rel="noopener" href="https://juejin.cn/post/7123962969095929893">View体系(上)</a></p>
+</li>
+<li><p><strong>Application(应用事件)</strong></p>
+<p>我们APP的启动都是要经过应用事件，而各种生命周期的初始化相关的回调、初始化也是要经过它。例如各类启动的 SDK 都是放在 <code>Application</code> 类中初始化的，这都是要在主线程中进行的。</p>
+</li>
+<li><p><strong>Services(服务事件)</strong></p>
+<p>这一点大家也许有点疑惑，后台服务为什么会是在主线程的呢？我们不是一般新开一个线程在后台执行耗时任务的么？上述的两点其实是不矛盾的，只是我们平时的理解也许有误，认为 <code>Services</code> 作为后台任务就是在子线程才对。但事实上， <code>Services</code> 是运行在主线程中的，即使它是在后台执行的，而我们需要执行耗时任务的时候，再在 <code>Services</code> 中创建子线程来执行这个耗时任务 。</p>
+</li>
+<li><p><strong>Alarm(定时事件)</strong></p>
+<p>定时事件中，由于它默认子线程是不安全的，主线程才是安全的，所以是需要到主线程去执行的。</p>
+</li>
+</ol>
+<p>而 <strong>UI绘制</strong> 虽然是在主线程中的，但是我们的代码是无法去控制它的，这是系统进行控制的。我们只能输入需要绘制什么，但是不能影响其绘制的流程。</p>
+<h3 id="界面更新以及卡顿"><a href="#界面更新以及卡顿" class="headerlink" title="界面更新以及卡顿"></a>界面更新以及卡顿</h3><h4 id="界面更新的VSync"><a href="#界面更新的VSync" class="headerlink" title="界面更新的VSync"></a>界面更新的VSync</h4><p>知晓主线程模型后，我们来看一下 <strong>界面是如何刷新</strong> 的</p>
+<p>下面的一图是介绍 <strong>Android</strong> 中的 <strong>VSync</strong> 机制，<strong>VSync</strong> 我们可以简单的理解为是一种屏幕刷新的信号，它会每隔一段时间就会刷新一次屏幕。(<a target="_blank" rel="noopener" href="https://www.leixue.com/ask/what-is-vsync">Vsync 是什么</a>、<a target="_blank" rel="noopener" href="https://juejin.cn/post/7125824443598766116">View体系(下)</a> 或 <a target="_blank" rel="noopener" href="https://codeantenna.com/a/f78pMsvFP3">Android图形显示系统</a> 可查看更多信息)</p>
+<blockquote>
+<p><strong>垂直同步（VSync）：</strong>当屏幕从缓冲区扫描完一帧到屏幕上之后，开始扫描下一帧之前，发出的一个同步信号，该信号用来切换前缓冲区和后缓冲区。</p>
+</blockquote>
+<p><img src="https://pic.lxtlovely.top/blog/00720825-ad55-4e2b-91e5-d950559d1fcd.png"></p>
+<p>而在 <strong>Android</strong> 中，<strong>VSync</strong> 信号的回调一般会在主线程中每隔16ms执行一次，而我们通过频率计算公式来计算一下： $f=\frac{1}{T} $，当 $T=16ms$ 时候，我们可以得出 $f=62.5HZ$ 这个就是我们常用的 $60fps$ 。</p>
+<p>在我们的视觉感知中，$24fps$ 通常可以让人眼感知到线性动作了，而人能感知到不卡顿的最低帧数则为 $25fps$。在 <strong>Vsync</strong> 机制中的 $60fps$ 则可以让设备呈现更加绚丽的效果，对于当下热炒的 $90fps$ 和 $120fps$ 则是让感觉上更加顺滑而已，但是对于与实际和功耗的平衡，高于 $60fps$ 是没有必要的。</p>
+<p>如下图，<code>UI Draw</code> 会在 16ms 就执行一次，所以我们的需要让我们的绘制流程在 16ms 内执行完才不会出现卡顿问题。</p>
+<p><img src="https://pic.lxtlovely.top/blog/Thread_struct_pic-put1.png"></p>
+<p>所以说，如果我们不影响界面的更新，让<strong>每次绘制流程都可以保持在16ms以下，那么就不会出现卡顿问题</strong>了。</p>
+<h4 id="三类主要的卡顿以及其原因"><a href="#三类主要的卡顿以及其原因" class="headerlink" title="三类主要的卡顿以及其原因"></a>三类主要的卡顿以及其原因</h4><ul>
+<li><p><strong>输入事件无法即时响应</strong></p>
+<p>这类卡顿主要表现为我们滑动屏幕的时候，屏幕根本无法响应。这是由于我们在主线程中执行了一段非常耗时的、与事件无关的代码，而由于这段代码还在执行，所以输入事件根本没法执行，也没法绘制出我们的滑动效果了。</p>
+<p><img src="https://pic.lxtlovely.top/blog/Thread_struct_pic-put2.png"></p>
+</li>
+<li><p><strong>输入事件立刻响应，但其耗时较长</strong></p>
+<p>这类卡顿中，输入事件是立即响应的了，但是由于我们又在输入事件的分发中做了很多计算逻辑等耗时的操作，所以还是会出现卡顿。其表现出来的效果是，滑动的时候一卡一卡的，这是由于输入事件的执行超过了16ms了，导致了丢帧的问题。</p>
+<p><img src="https://pic.lxtlovely.top/blog/Thread_struct_pic-put3.png"></p>
+</li>
+<li><p><strong>UI Draw 之外需要在主线程中执行的任务耗时长</strong></p>
+<p>我们知道，主线程中不单只有 UI 的绘制任务，还有其他的例如 Application 任务也是需要放置在主线程中执行的。这些任务如果不做处理，也一股脑的放置在主线程中执行，那么也会导致其占用时间过长，使得 APP 出现丢帧的问题。</p>
+<p><img src="https://pic.lxtlovely.top/blog/Thread_struct_pic-put4.png"></p>
+</li>
+</ul>
+<h4 id="解决卡顿问题"><a href="#解决卡顿问题" class="headerlink" title="解决卡顿问题"></a>解决卡顿问题</h4><p>我们现已经知道了三大类卡顿的原因，其归结来说的原因就是主线程中出现了不必要的耗时操作，导致最后主线程的UI绘制出现阻塞或者溢出。那么我们解决卡顿、做流畅性优化的方法也是很明确了，那就是**让主线程尽量只做交互(Input Event)以及刷新(UI Draw)**。当然很多需要在主线程中的代码是无法避免的，但是我们尽量使其缩小，让所有的耗时代码都在子线程中运行，这样子使得其减少丢帧，能够更加的连贯顺滑。</p>
+<p><img src="https://pic.lxtlovely.top/blog/Thread_struct_pic-put5.png"></p>
+<h4 id="没有VSync会怎么样？"><a href="#没有VSync会怎么样？" class="headerlink" title="没有VSync会怎么样？"></a>没有VSync会怎么样？</h4><p>上述讲到了 VSync 的作用以及卡顿的原因和处理，我们知道 VSync 信号可以用于同步刷新页面。那若是没有 VSync 信号，我们的页面会出现什么样的问题？</p>
+<p>其实会出现<strong>画面撕裂</strong>。画面撕裂是什么呢？如下图中红色框中的图面，与上边出现了撕裂，这种就是画面撕裂。其出现的原因是上一帧的页面还在绘制中，下一帧页面就继续占用资源绘制了，所以会出现几帧的页面同时绘制在一个页面中，出现了画面撕裂感。</p>
+<p><img src="https://pic.lxtlovely.top/blog/20221022205107.png"></p>
+<p>那为何映入 VSync 信号之后就不会有画面撕裂问题了呢？</p>
+<blockquote>
+<p>在显示一张图片的时候，其流程为：GPU进⾏渲染—&gt;帧缓存区⾥ —&gt;显示控制器—&gt;读取帧缓存区信息(位图) —&gt; 数模转化(数字信号处—&gt;模 拟型号) —&gt;(逐⾏扫描)显示。<br>正常的情况下，显示器完全显示完一帧后，帧缓存区更新一帧，这样便不会有撕裂问题，但事实并非如此。<br>当显卡输出帧的速度比显示器快，显示器的处理速度跟不上显卡，在显示器处理显卡丢过来的第1帧的时候，第2帧就又到了（帧缓存区已更新），导致同一个画面同时出现1、2两帧，撕裂就产生了</p>
+</blockquote>
+<p>在没有 VSync 信号的时候，一旦GPU渲染完后就会交由屏幕去将其绘制出来，那么 CPU 和 GPU 处理的事件有长有短，一旦两帧出现绘制冲突，就会出现画面撕裂问题了。</p>
+<p>所以说，<strong>解决画面撕裂的核心是决定好数据的交换时机(绘制时机)由谁来控制</strong>。在绘制中，不应该是 CPU 处理写入之后就立即绘制，而应该是由屏幕渲染完一帧之后才去绘制绘制下一帧。然而屏幕不是控制器，它无法控制什么时候进行绘制，但是它可以传递 VSync 信号给 Android 系统，借助 VSync 信号，Android 就可以让 CPU 在新的一帧开始的时候立即处理显示问题了。</p>
+<blockquote>
+<p>VSYNC 信号是由屏幕（显示设备）产生的，并且以 60fps 的固定频率发送给 Android 系统，Android 系统中的 SurfaceFlinger 接收发送的 VSYNC 信号。VSYNC 信号表明可对屏幕进行刷新而不会产生撕裂。</p>
+</blockquote>
+<p><img src="https://pic.lxtlovely.top/blog/1666442354.jpg"></p>
+<p>图片中未对 VSync 信号进行处理，导致出现卡顿问题。</p>
+<h2 id="资源优化"><a href="#资源优化" class="headerlink" title="资源优化"></a>资源优化</h2><p>资源是什么？</p>
+<p>资源指的是：Android 手机的软件和硬件资源，通俗意义上应用依赖于移动端的有限资源和系统规定的数值。例如：功耗、存储、流量、系统参数、CPU、内存等。</p>
+<p>我们对上述的资源进行优化的时候，其并非无关联的、相互隔离的，例如流量消耗大，那么功耗消耗也会大，内存和存储的消耗也会大。但是我们需要优化某一个点的时候，是需要聚焦于其中这一点进行优化的。</p>
+<p>当然，如<a target="_blank" rel="noopener" href="https://juejin.cn/post/7156240670615666719">前文</a>所说我们使用的设备也是在不断地优化的，但是并非说等着硬件的优化，我们的软件能跑就行。对于资源优化，我们追求的是<strong>利用最小的资源达到最好的效果</strong>，这是很有挑战性，对自我提升也很高的事情。</p>
+<h3 id="Android-能做哪些资源优化"><a href="#Android-能做哪些资源优化" class="headerlink" title="Android 能做哪些资源优化"></a>Android 能做哪些资源优化</h3><p><img src="https://pic.lxtlovely.top/blog/20221022215929.png"><img src="https://pic.lxtlovely.top/blog/20221022215944.png" style="zoom: 40%;"></p>
+<p>上图中展示了对于当下技术特征的满意度，我们会发现上述的点其实都不算高。无论是内存/存储、电量或者是流量等等方面都是需要我们继续优化的点。而右图指的是如果后台的进程如果很多的话，使得内存占用很多，导致前台的APP也会收到内存的限制变得卡顿。</p>
+<p><img src="https://pic.lxtlovely.top/blog/Resource_optimization-put0.png"></p>
+<p>上图中<strong>对音量的优化</strong>其实收益也是很大的。例如当下的自媒体平台抖音，它就是在端侧进行了音量优化，取得了很大的收益。因为每一个人拍视频的音量和背景嘈杂度都是不一样的，所以我们需要在上传视频到平台的时候进行音量优化，对各种音量进行优化、拟合到同一水平，这样子可以使得用户在打开不同视频的时候，视频的音量不会影响到用户的体验。</p>
+<p><img src="https://pic.lxtlovely.top/blog/20221022222337.png"><img src="https://pic.lxtlovely.top/blog/20221022222347.png" style="zoom: 60%;"></p>
+<p>而对于亮度的优化，可以使得我们的功耗降低，节省手机有限的电量。上面左图可以看出，深色模式对电量的影响是很显著的。而同时在优化亮度的时候，我们也可以找出功耗与体验的平衡点，使得功耗低的时候，我们的体验感也是最好的。这一点可以在右图中看出。</p>
+<h2 id="稳定性优化"><a href="#稳定性优化" class="headerlink" title="稳定性优化"></a>稳定性优化</h2><p><img src="https://pic.lxtlovely.top/blog/anr-example-framed.png"></p>
+<p>对于稳定性优化，我们主要讲的点是 ANR，而其他的崩溃等则是需要尽可能的抹去，这里暂不做分析。ANR 是应用长时间处于阻塞状态的时候，系统会触发 ANR ，然后系统会询问是否需要强制退出或者继续等待。</p>
+<p><strong>ANR 存在的的原因是我们不能因为一个程序出现问题就使得整个手机无法使用</strong>。所以需要 ANR 来将错误的程序退出。而我们对其优化则需要尽可能的减少这种情况的出现，使得用户被打断，这是一种很不好的体验。</p>
+<p>诊断 ANR 时需要考虑以下几种常见模式：</p>
+<ol>
+<li>应用在主线程上非常缓慢地执行涉及 I/O 的操作。</li>
+<li>应用在主线程上进行长时间的计算。</li>
+<li>主线程在对另一个进程进行同步 binder 调用，而后者需要很长时间才能返回。</li>
+<li>主线程处于阻塞状态，为发生在另一个线程上的长操作等待同步的块。</li>
+<li>主线程在进程中或通过 binder 调用与另一个线程之间发生死锁。主线程不只是在等待长操作执行完毕，而且处于死锁状态。</li>
+</ol>
+<h2 id="系统级优化"><a href="#系统级优化" class="headerlink" title="系统级优化"></a>系统级优化</h2><p><img src="https://pic.lxtlovely.top/blog/20221022224827.png"></p>
+<p>对于 Android 系统，Google 本身也对其系统做了很多重大的优化，这些优化使得 Android 系统很多的问题得以解决，很多使用体验变得更好。而这些优化的点，我们可以作为今后的思路，让我们对 APP 的优化有更广阔的思考，让我们能发掘出更多的优化点和对其有更加深刻的思考</p>
+<p><img src="https://i.loli.net/2021/10/09/iFWTetAq6OBwRZn.png" alt="Android架构图"></p>
+<p>对于业务开发中，我们很多时候都是使用到 Application 和 FrameWork 层，但是需要真正做好性能优化，我们需要了解到很多的 核心库 Kernel 层的原理，这对我们自身来说，也是正向的收益。</p>
+<p>本篇四大性能优化的详解就讲到这里，如果对你有帮助欢迎star！</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a><strong>参考</strong></h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/217298155">VSync与屏幕撕裂 - 知乎 (zhihu.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/guoyongming925/article/details/107326361">屏幕撕裂及掉帧原因与解决方案_Daniel_Coder的博客-CSDN博客_屏幕撕裂</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/b173875d82e4">浅谈画面撕裂 - 简书 (jianshu.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u011578734/article/details/110921266">Android 显示刷新机制、VSYNC和三重缓存机制_卜大爷的博客-CSDN博客_android vsync</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Frakie_Kwok/article/details/78623982">Service 运行在主线程_Frank_de_Boer的博客-CSDN博客_service是否在主线程中执行</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7125824443598766116">View体系(下)|青训营笔记 - 掘金 (juejin.cn)</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7123962969095929893">View体系(上)|青训营笔记 - 掘金 (juejin.cn)</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.leixue.com/ask/what-is-vsync">Vsync 是什么 - 泪雪网 (leixue.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/a740169405/article/details/70548443">Android图形显示系统（一）_良秋的博客-CSDN博客_android显示系统</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7123529478558613512">【Android 客户端专场 学习资料三】第四届字节跳动青训营 - 掘金 (juejin.cn)</a></p>
+<p><a target="_blank" rel="noopener" href="https://developer.android.com/topic/performance/vitals/anr">ANR  | Android 开发者  | Android Developers</a></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">DYJ</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://dyjcow.github.io/2023/03/10/tan-xi-android-zhong-de-si-lei-xing-neng-you-hua/">https://dyjcow.github.io/2023/03/10/tan-xi-android-zhong-de-si-lei-xing-neng-you-hua/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">DYJ</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E4%BC%98%E5%8C%96/">
+                                    <span class="chip bg-color">优化</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%80%A7%E8%83%BD/">
+                                    <span class="chip bg-color">性能</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'MDAM9WsFyEbNeHHme0iY9W9Q-gzGzoHsz',
+        appKey: '9ApyBKAMR3QRObI2rrzYlOTq',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'just go go'
+    });
+</script>
+
+<!--酷Q推送-->
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2023/03/12/tu-yuan-ma-du-dong-view-de-layout-fang-fa/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="图+源码，读懂View的Layout方法">
+                        
+                        <span class="card-title">图+源码，读懂View的Layout方法</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-03-12
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/View%E7%9A%84%E4%BA%8B%E4%BB%B6%E4%BD%93%E7%B3%BB/" class="post-category">
+                                    View的事件体系
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/View/">
+                        <span class="chip bg-color">View</span>
+                    </a>
+                    
+                    <a href="/tags/View%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/">
+                        <span class="chip bg-color">View的工作原理</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/11/17/rabin-karp-suan-fa/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="算法|Rabin Karp 算法">
+                        
+                        <span class="card-title">算法|Rabin Karp 算法</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Rabin Karp 算法
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-17
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    算法笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
+                    </a>
+                    
+                    <a href="/tags/Rabin-Karp/">
+                        <span class="chip bg-color">Rabin Karp</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="330695641"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021-2024</span>
+            
+            <a href="/about" target="_blank">DYJ</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">131.4k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2021";
+                        var startMonth = "12";
+                        var startDate = "14";
+                        var startHour = "20";
+                        var startMinute = "31";
+                        var startSecond = "55";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+            
+                <span id="icp"><img src="/medias/icp.png"
+                                    style="vertical-align: text-bottom;"/>
+                <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2022037955号</a>
+            </span>
+            
+
+            
+                <span id="icp"><img src="/medias/police.png"
+                                    style="vertical-align: text-bottom;"/>
+                <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44011302003505" target="_blank">粤公网安备 44011302003505号</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/dyjcow" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2568288122@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2568288122" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2568288122" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+        
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/sakura.js"><\/script>');
+            }
+        </script>
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+    
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ed8f10a891cd5864a1729eff68e467e2";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
